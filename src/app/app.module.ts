@@ -12,6 +12,7 @@ import { HomeComponent } from './dashboard/home/home.component';
 import { ProfileComponent } from './dashboard/profile/profile.component';
 import 'hammerjs';
 import { NavbarComponent } from './shared/navbar/navbar.component';
+import { FigurecardComponent } from './shared/figurecard/figurecard.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
     SidebarComponent,
     HomeComponent,
     ProfileComponent,
-    NavbarComponent
+    NavbarComponent,
+    FigurecardComponent
   ],
   imports: [
     BrowserModule,
