@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-figurecard',
@@ -6,7 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./figurecard.component.css']
 })
 export class FigurecardComponent implements OnInit {
-
+  @Input() headerIcon: string;
+  @Input() category: string;
+  @Input() title: string;
+  @Input() footerIcon: string;
+  @Input() footContent: string;
+  @Input() backgroundColor: string;
   constructor() { }
 
   ngOnInit() {
