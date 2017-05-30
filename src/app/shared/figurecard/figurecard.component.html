@@ -1,5 +1,5 @@
 <div class="card">
-  <div class="card-header" style="background: linear-gradient(60deg, #ffa726, #fb8c00)">
+  <div class="card-header" [ngStyle]="{ 'background': linearColor, 'box-shadow': boxShadow }">
     <i class="material-icons">{{ headerIcon }}</i>
   </div>
   <div class="card-content">
