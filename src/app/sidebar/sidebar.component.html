@@ -1,5 +1,14 @@
 <div class="sidebar">
-  <p>Side Bar</p>
-  <a href="/home">Dashboard</a>
-  <a href="/profile">User Profile</a>
+  <div class="logo-part">
+    <img src="../../assets/img/angular2-logo.png" alt="logo"/>
+    <p>Material Dashboard</p>
+  </div>
+  <ul class="nav links">
+    <li routerLinkActive="route-active" class="route">
+      <a routerLink="/home"><i class="material-icons">dashboard</i><p>Dashboard</p></a>
+    </li>
+    <li routerLinkActive="route-active" class="route">
+      <a routerLink="/profile"><i class="material-icons">person</i><p>Profile</p></a>
+    </li>
+  </ul>
 </div>

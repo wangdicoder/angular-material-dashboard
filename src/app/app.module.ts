@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { routing } from './app.routes';
-import { MdButtonModule, MdRadioModule } from '@angular/material';
+import { MdButtonModule, MdRadioModule, MdInputModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
@@ -30,7 +30,8 @@ import { FigurecardComponent } from './shared/figurecard/figurecard.component';
     routing,
     BrowserAnimationsModule,
     MdButtonModule,
-    MdRadioModule
+    MdRadioModule,
+    MdInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -6,7 +6,7 @@ import { HomeComponent } from './dashboard/home/home.component';
 import { ProfileComponent } from './dashboard/profile/profile.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: 'home', pathMatch: 'full'},
+  // {path: '', component: HomeComponent},
   {path: 'home', component: HomeComponent},
   {path: 'profile', component: ProfileComponent}
 ];

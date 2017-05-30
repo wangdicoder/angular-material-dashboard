@@ -58,7 +58,7 @@ p {
 }
 
 .container{
-  padding: 0 30px;
+  padding: 15px 30px;
 }
 
 @media (min-width: 1200px) {

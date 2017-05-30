@@ -4,4 +4,76 @@
   position: absolute;
   z-index: 2;
   width: 100%;
+  padding: 15px 15px;
 }
+
+.logo-part{
+  display: flex;
+  align-items: center;
+  padding: 7px 3px 10px 3px;
+  border-bottom: 1px solid rgba(255,255,255, .4);
+}
+
+.logo-part img{
+  width: 42px;
+  height: 42px;
+}
+
+.logo-part p{
+  color: #fff;
+  font-size: 18px;
+  margin: 0 0 0 10px;
+}
+
+.links{
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+}
+
+.route{
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-weight: 100;
+  margin-top: 10px;
+  transition: all 400ms;
+}
+
+.route a{
+  padding: 13px;
+  display: flex;
+  width: 100%;
+  background-color: transparent;
+}
+
+.route > a > i, p{
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.route:hover{
+  background-color: rgba(255,255,255,.1);
+  transition: all 400ms;
+  border-radius: 3px;
+}
+
+.route p{
+  margin: 0;
+}
+
+.route i{
+  margin-right: 15px;
+}
+
+.route-active{
+  background-color: #fff;
+  transition: all 400ms;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(60, 72, 88, 0.4);
+  border-radius: 3px;
+}
+
+.route-active > a > p, i{
+  color: rgba(0,0,0,.6);
+}
+
+
