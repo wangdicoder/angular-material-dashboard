@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { routing } from './app.routes';
-import { MdButtonModule, MdRadioModule, MdInputModule } from '@angular/material';
+import { MdButtonModule, MdRadioModule, MdInputModule, MdMenuModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
@@ -16,6 +16,7 @@ import { FigurecardComponent } from './shared/figurecard/figurecard.component';
 import { ImagecardComponent } from './shared/imagecard/imagecard.component';
 import { TableComponent } from './dashboard/table/table.component';
 import { NotificationComponent } from './dashboard/notification/notification.component';
+import { MsgIconBtnComponent } from './shared/msgiconbtn/msgiconbtn.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { NotificationComponent } from './dashboard/notification/notification.com
     FigurecardComponent,
     ImagecardComponent,
     TableComponent,
-    NotificationComponent
+    NotificationComponent,
+    MsgIconBtnComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +39,8 @@ import { NotificationComponent } from './dashboard/notification/notification.com
     BrowserAnimationsModule,
     MdButtonModule,
     MdRadioModule,
-    MdInputModule
+    MdInputModule,
+    MdMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
