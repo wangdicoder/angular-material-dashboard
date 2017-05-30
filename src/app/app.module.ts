@@ -14,6 +14,8 @@ import 'hammerjs';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FigurecardComponent } from './shared/figurecard/figurecard.component';
 import { ImagecardComponent } from './shared/imagecard/imagecard.component';
+import { TableComponent } from './dashboard/table/table.component';
+import { NotificationComponent } from './dashboard/notification/notification.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { ImagecardComponent } from './shared/imagecard/imagecard.component';
     ProfileComponent,
     NavbarComponent,
     FigurecardComponent,
-    ImagecardComponent
+    ImagecardComponent,
+    TableComponent,
+    NotificationComponent
   ],
   imports: [
     BrowserModule,
