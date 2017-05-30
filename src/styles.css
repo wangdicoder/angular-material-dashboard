@@ -61,6 +61,13 @@ p {
   padding: 15px 30px;
 }
 
+.card{
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+  border-radius: 6px;
+  color: rgba(0,0,0, 0.87);
+  background: #fff;
+}
+
 @media (min-width: 1200px) {
   .container {
     width: 100%;
