@@ -13,6 +13,7 @@ import { ProfileComponent } from './dashboard/profile/profile.component';
 import 'hammerjs';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FigurecardComponent } from './shared/figurecard/figurecard.component';
+import { ImagecardComponent } from './shared/imagecard/imagecard.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FigurecardComponent } from './shared/figurecard/figurecard.component';
     HomeComponent,
     ProfileComponent,
     NavbarComponent,
-    FigurecardComponent
+    FigurecardComponent,
+    ImagecardComponent
   ],
   imports: [
     BrowserModule,
