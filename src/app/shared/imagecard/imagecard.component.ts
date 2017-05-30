@@ -10,6 +10,7 @@ export class ImagecardComponent implements OnInit {
   @Input() desc: string;
   @Input() footerTitle: string;
   @Input() position: string;
+  @Input() image: string;
   constructor() { }
 
   ngOnInit() {
