@@ -17,6 +17,7 @@ import { ImagecardComponent } from './shared/imagecard/imagecard.component';
 import { TableComponent } from './dashboard/table/table.component';
 import { NotificationComponent } from './dashboard/notification/notification.component';
 import { MsgIconBtnComponent } from './shared/msgiconbtn/msgiconbtn.component';
+import { SweetAlertComponent } from './dashboard/sweetalert/sweetalert.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { MsgIconBtnComponent } from './shared/msgiconbtn/msgiconbtn.component';
     ImagecardComponent,
     TableComponent,
     NotificationComponent,
-    MsgIconBtnComponent
+    MsgIconBtnComponent,
+    SweetAlertComponent
   ],
   imports: [
     BrowserModule,
