@@ -4,17 +4,17 @@
     <p>Material Dashboard</p>
   </div>
   <ul class="nav links">
-    <li routerLinkActive="route-active" class="route">
-      <a routerLink="/home"><i class="material-icons">dashboard</i><p>Dashboard</p></a>
+    <li routerLinkActive #dashboard="routerLinkActive" [ngClass]="dashboard.isActive ? 'route-active route' : 'route hover'" [routerLinkActiveOptions]="{exact: true}">
+      <a routerLink="/"><i class="material-icons" [ngStyle]="{color: dashboard.isActive ? 'rgba(0,0,0,.6)' : 'rgba(255, 255, 255, 0.8)'}">dashboard</i><p>Dashboard</p></a>
     </li>
-    <li routerLinkActive="route-active" class="route">
-      <a routerLink="/profile"><i class="material-icons">person</i><p>User Profile</p></a>
+    <li routerLinkActive #profile="routerLinkActive" [ngClass]="profile.isActive ? 'route-active route' : 'route hover'">
+      <a routerLink="/profile"><i class="material-icons" [ngStyle]="{color: profile.isActive ? 'rgba(0,0,0,.6)' : 'rgba(255, 255, 255, 0.8)'}">person</i><p>User Profile</p></a>
     </li>
-    <li routerLinkActive="route-active" class="route">
-      <a routerLink="/table"><i class="material-icons">content_paste</i><p>Table List</p></a>
+    <li routerLinkActive #table="routerLinkActive" [ngClass]="table.isActive ? 'route-active route' : 'route hover'">
+      <a routerLink="/table"><i class="material-icons" [ngStyle]="{color: table.isActive ? 'rgba(0,0,0,.6)' : 'rgba(255, 255, 255, 0.8)'}">content_paste</i><p>Table List</p></a>
     </li>
-    <li routerLinkActive="route-active" class="route">
-      <a routerLink="/notification"><i class="material-icons">notifications</i><p>Notification</p></a>
+    <li routerLinkActive #notification="routerLinkActive" [ngClass]="notification.isActive ? 'route-active route' : 'route hover'">
+      <a routerLink="/notification"><i class="material-icons" [ngStyle]="{color: notification.isActive ? 'rgba(0,0,0,.6)' : 'rgba(255, 255, 255, 0.8)'}">notifications</i><p>Notification</p></a>
     </li>
   </ul>
 </div>

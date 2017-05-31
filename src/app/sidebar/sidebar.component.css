@@ -53,7 +53,7 @@
   font-weight: 100;
 }
 
-.route:hover{
+.hover:hover{
   background-color: rgba(255,255,255,.1);
   transition: all 400ms;
   border-radius: 3px;
@@ -70,7 +70,7 @@
   border-radius: 3px;
 }
 
-.route-active > a > p, i{
+.route-active p, i{
   color: rgba(0,0,0,.6);
   font-weight: 300;
 }
