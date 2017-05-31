@@ -18,6 +18,7 @@ import { TableComponent } from './dashboard/table/table.component';
 import { NotificationComponent } from './dashboard/notification/notification.component';
 import { MsgIconBtnComponent } from './shared/msgiconbtn/msgiconbtn.component';
 import { SweetAlertComponent } from './dashboard/sweetalert/sweetalert.component';
+import { LoginComponent } from './page/login/login.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { SweetAlertComponent } from './dashboard/sweetalert/sweetalert.component
     TableComponent,
     NotificationComponent,
     MsgIconBtnComponent,
-    SweetAlertComponent
+    SweetAlertComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
