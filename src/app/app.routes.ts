@@ -10,9 +10,13 @@ import { SweetAlertComponent } from './dashboard/sweetalert/sweetalert.component
 
 import { RootComponent } from './dashboard/root/root.component';
 import { LoginComponent } from './page/login/login.component';
+import { LockComponent } from './page/lock/lock.component';
+import { RegisterComponent } from './page/register/register.component';
 
 const routes: Routes = [
-  {path: 'login', component: LoginComponent},
+  {path: '', component: LoginComponent},
+  {path: 'lock', component: LockComponent},
+  {path: 'register', component: RegisterComponent},
   {path: 'dashboard', component: RootComponent, children: [
     {path: '', component: HomeComponent},
     {path: 'profile', component: ProfileComponent},

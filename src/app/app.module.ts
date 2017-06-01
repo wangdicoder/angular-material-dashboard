@@ -20,6 +20,10 @@ import { MsgIconBtnComponent } from './shared/msgiconbtn/msgiconbtn.component';
 import { SweetAlertComponent } from './dashboard/sweetalert/sweetalert.component';
 import { LoginComponent } from './page/login/login.component';
 import { RootComponent } from './dashboard/root/root.component';
+import { RegisterComponent } from './page/register/register.component';
+import { LockComponent } from './page/lock/lock.component';
+import { HeaderComponent } from './shared/header/header.component';
+import { FooterComponent } from './shared/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +39,11 @@ import { RootComponent } from './dashboard/root/root.component';
     MsgIconBtnComponent,
     SweetAlertComponent,
     LoginComponent,
-    RootComponent
+    RootComponent,
+    RegisterComponent,
+    LockComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
