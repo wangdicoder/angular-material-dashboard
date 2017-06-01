@@ -19,6 +19,7 @@ import { NotificationComponent } from './dashboard/notification/notification.com
 import { MsgIconBtnComponent } from './shared/msgiconbtn/msgiconbtn.component';
 import { SweetAlertComponent } from './dashboard/sweetalert/sweetalert.component';
 import { LoginComponent } from './page/login/login.component';
+import { RootComponent } from './dashboard/root/root.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { LoginComponent } from './page/login/login.component';
     NotificationComponent,
     MsgIconBtnComponent,
     SweetAlertComponent,
-    LoginComponent
+    LoginComponent,
+    RootComponent
   ],
   imports: [
     BrowserModule,
