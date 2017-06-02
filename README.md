@@ -4,4 +4,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Screenshot
 
+### Dashboard
+
 ![](https://github.com/wangdicoder/angular2-material-dashboard-pro/raw/master/screenshot/dashboard.png)
+
+### Login
+
+![](https://github.com/wangdicoder/angular2-material-dashboard-pro/raw/master/screenshot/login.png)
