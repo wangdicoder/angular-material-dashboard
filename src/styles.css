@@ -4,6 +4,7 @@
 html, body {
   padding: 0;
   margin: 0;
+  height: 100%;
 }
 
 body {
@@ -24,7 +25,6 @@ h1, h2, h3, h4, h5, h6, p, a, button, div {
 
 h1, .h1 {
   font-size: 3.8em;
-  line-height: 1.15em;
 }
 
 h2, .h2 {
@@ -33,24 +33,19 @@ h2, .h2 {
 
 h3, .h3 {
   font-size: 1.825em;
-  line-height: 1.4em;
 }
 
 h4, .h4 {
   font-size: 1.3em;
-  line-height: 1.4em;
 }
 
 h5, .h5 {
   font-size: 1.25em;
-  line-height: 1.4em;
-  margin-bottom: 15px;
 }
 
 h6, .h6 {
   font-size: 1em;
   text-transform: uppercase;
-  font-weight: 500;
 }
 
 p {

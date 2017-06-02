@@ -1,0 +1,17 @@
+.login{
+  background: url("../../../assets/img/login_bg.jpg") no-repeat center center;
+  height: 100%;
+  background-size: cover;
+  filter: brightness(40%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+}
+
+.container{
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}

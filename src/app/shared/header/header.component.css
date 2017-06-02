@@ -1,0 +1,32 @@
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left *{
+  color: #fff;
+}
+
+.right{
+  display: flex;
+}
+
+.right a{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+  margin-right: 25px;
+}
+
+.right p{
+  margin-left: 5px;
+  font-size: 12px;
+  line-height: normal;
+}
+
+.right i{
+  font-size: 20px;
+}
