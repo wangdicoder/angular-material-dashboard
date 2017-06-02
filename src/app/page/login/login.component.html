@@ -6,7 +6,40 @@
     </div>
    <div class="row">
      <div class="col-md-4 col-sm-6 col-md-offset-4 col-sm-offset-3">
-       dsdsd
+       <div class="card">
+         <div class="card-header">
+            <h4>Login</h4>
+           <div class="social-btns">
+             <button md-icon-button><i class="fa fa-facebook-square"></i></button>
+             <button md-icon-button><i class="fa fa-twitter"></i></button>
+             <button md-icon-button><i class="fa fa-google-plus"></i></button>
+           </div>
+         </div>
+         <p class="tip">Or Be Classical</p>
+         <div class="card-form">
+           <div class="form-row">
+             <i class="material-icons">face</i>
+             <md-input-container>
+               <input type="text" mdInput placeholder="First Name"/>
+             </md-input-container>
+           </div>
+           <div class="form-row">
+             <i class="material-icons">email</i>
+             <md-input-container>
+               <input type="text" mdInput placeholder="Email address"/>
+             </md-input-container>
+           </div>
+           <div class="form-row">
+             <i class="material-icons">lock_outline</i>
+             <md-input-container>
+               <input type="password" mdInput placeholder="Password"/>
+             </md-input-container>
+           </div>
+         </div>
+         <div class="card-footer">
+           <button md-button (click)="loginBtn()">LET'S GO</button>
+         </div>
+       </div>
      </div>
    </div>
   </div>
