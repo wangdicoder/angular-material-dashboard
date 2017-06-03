@@ -92,3 +92,34 @@ p {
   width: 100%;
   z-index: 0;
 }
+
+.mat-menu-panel{
+  border-radius: 3px;
+}
+
+.mat-menu-content{
+  padding: 5px !important;
+}
+
+.mat-menu-content .mat-menu-item{
+  font-size: 13px;
+  border-radius: 2px;
+  line-height: 38px;
+  height: 38px;
+  -webkit-transition: all 400ms;
+  -moz-transition: all 400ms;
+  -ms-transition: all 400ms;
+  -o-transition: all 400ms;
+  transition: all 400ms;
+}
+
+.mat-menu-content .mat-menu-item:hover{
+  background-color: #9c27b0 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(156, 39, 176, 0.4) !important;
+  -webkit-transition: all 400ms;
+  -moz-transition: all 400ms;
+  -ms-transition: all 400ms;
+  -o-transition: all 400ms;
+  transition: all 400ms;
+}
