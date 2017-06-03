@@ -3,3 +3,52 @@
   position: relative;
   z-index: 1;
 }
+
+.background{
+  background: url("../../../assets/img/lock_bg.jpg") no-repeat center center;
+}
+
+.card{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  margin-top: 70px;
+}
+
+.card-header img{
+  position: relative;
+  top: -60px;
+  border-radius: 50%;
+  width: 90px;
+  box-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.42), 0 4px 25px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.card h4{
+  margin-top: -30px;
+  margin-bottom: 20px;
+}
+
+.card-body, .card-body .mat-input-container{
+  width: 100%;
+}
+
+.card-footer{
+  margin: 15px 0 5px 0;
+}
+
+.card-footer button{
+  background-color: #e91e63;
+  color: #fff;
+  box-shadow: 0 2px 2px 0 rgba(233, 30, 99, 0.14), 0 3px 1px -2px rgba(233, 30, 99, 0.2), 0 1px 5px 0 rgba(233, 30, 99, 0.12);
+  border-radius: 30px;
+  font-size: 10px;
+  padding: 3px 30px;
+}
+
+/*.mat-raised-button.mat-button-focus-overlay, .mat-button-ripple{*/
+  /*border-radius: 30px;*/
+/*}*/
+

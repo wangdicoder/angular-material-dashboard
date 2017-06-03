@@ -3,3 +3,7 @@
   position: relative;
   z-index: 1;
 }
+
+.background{
+  background: url("../../../assets/img/register_bg.jpg") no-repeat center center;
+}
