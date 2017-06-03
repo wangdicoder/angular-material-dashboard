@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.4.
 
+## Demo
+
+http://128.199.249.194/
+
 ## Screenshot
 
 ### Dashboard
