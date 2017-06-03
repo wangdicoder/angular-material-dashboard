@@ -16,6 +16,24 @@
   width: 100%;
   padding: 20px;
   margin-top: 70px;
+  top: -60px;
+  -webkit-animation-name: card;
+  -moz-animation-name: card;
+  -o-animation-name: card;
+  animation-name: card;
+  -webkit-animation-duration: 600ms;
+  -moz-animation-duration: 600ms;
+  -o-animation-duration: 600ms;
+  animation-duration: 600ms;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes card {
+  from {top: -40px;}
+  to {top: 0;}
 }
 
 .card-header img{
@@ -48,7 +66,7 @@
   padding: 3px 30px;
 }
 
-/*.mat-raised-button.mat-button-focus-overlay, .mat-button-ripple{*/
-  /*border-radius: 30px;*/
-/*}*/
+.card-footer button:hover{
+  box-shadow: 0 14px 26px -12px rgba(233, 30, 99, 0.42), 0 4px 23px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(233, 30, 99, 0.2);
+}
 

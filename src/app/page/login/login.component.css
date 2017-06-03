@@ -11,6 +11,24 @@
   flex-direction: column;
   align-items: center;
   margin-top: 90px;
+  top: -90px;
+  -webkit-animation-name: card;
+  -moz-animation-name: card;
+  -o-animation-name: card;
+  animation-name: card;
+  -webkit-animation-duration: 600ms;
+  -moz-animation-duration: 600ms;
+  -o-animation-duration: 600ms;
+  animation-duration: 600ms;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes card {
+  from {top: -40px;}
+  to {top: 0;}
 }
 
 .card-header{
