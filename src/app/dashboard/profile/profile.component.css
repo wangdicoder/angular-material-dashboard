@@ -1,0 +1,38 @@
+.right-profile{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px;
+  position: relative;
+  margin-top: 60px;
+}
+
+.profile{
+  position: absolute;
+  top: -65px;
+}
+
+.profile img{
+  border-radius: 50%;
+  width: 130px;
+  box-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.42), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.right-profile h6{
+  margin-top: 80px;
+  margin-bottom: 8px;
+  color: #999;
+}
+
+.right-profile h4{
+  margin-bottom: 5px;
+}
+
+.right-profile p{
+  color: #999;
+}
+
+.right-profile button{
+  margin-top: 15px;
+  background-color: #e91e63;
+}

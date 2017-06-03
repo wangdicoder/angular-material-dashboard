@@ -36,6 +36,11 @@
   to {top: 0;}
 }
 
+@keyframes card {
+  from {top: -40px;}
+  to {top: 0;}
+}
+
 .card-header img{
   position: relative;
   top: -60px;
