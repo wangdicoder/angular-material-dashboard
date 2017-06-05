@@ -14,12 +14,12 @@
             <div class="row">
               <div class="col-md-6">
                 <md-input-container color="accent">
-                  <input mdInput type="text" placeholder="First Name">
+                  <input mdInput type="text" placeholder="First Name" [(ngModel)]="firstName" value="Ci" name="firstName">
                 </md-input-container>
               </div>
               <div class="col-md-6">
                 <md-input-container color="accent">
-                  <input mdInput type="text" placeholder="Last Name">
+                  <input mdInput type="text" placeholder="Last Name" [(ngModel)]="lastName" value="Clia" name="lastName">
                 </md-input-container>
               </div>
             </div>
@@ -68,7 +68,7 @@
           <img src="../../../assets/img/marc.jpg" alt="profile"/>
         </div>
         <h6>CEO / CO-FOUNDER</h6>
-        <h4>Alec Thompson</h4>
+        <h4>{{ firstName }} {{ lastName }}</h4>
         <p>Don't be scared of the truth because we need to restart the human foundation in truth And I love you like
           Kanye loves Kanye I love Rick Owens’ bed design but the back is...</p>
         <button md-raised-button color="accent">CHANGE</button>
