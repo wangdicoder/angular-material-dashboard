@@ -198,3 +198,9 @@ p {
     stroke: #9c27b0;
   }
 }
+
+@media screen and (max-width: 990px){
+  #sidebar, #nav-right, #nav-left-button{
+    display: none;
+  }
+}
