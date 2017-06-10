@@ -354,7 +354,7 @@ p {
   margin: 20px 0 0 0;
 }
 
-.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+.table > thead > tr > th, .table > tbody > tr > th, .table > thead > tr > td, .table > tbody > tr > td{
   padding: 12px 8px;
   vertical-align: middle;
 }
