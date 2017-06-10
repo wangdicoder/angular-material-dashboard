@@ -4,7 +4,7 @@
     <div class="row">
       <app-header></app-header>
     </div>
-    <div class="row">
+    <div class="row register-panel">
       <div class="col-md-10 col-md-offset-1">
         <div class="card">
           <h2>Register</h2>
@@ -41,9 +41,11 @@
             <div class="col-md-6">
               <div class="form-part">
                 <div class="socials">
-
+                  <a md-mini-fab style="background-color: #55acee;"><i class="fa fa-twitter"></i></a>
+                  <a md-mini-fab style="background-color: #ea4c89; margin: 0 5px;"><i class="fa fa-dribbble"></i></a>
+                  <a md-mini-fab style="background-color: #3b5998;"><i class="fa fa-facebook"></i></a>
                 </div>
-                <h6>or be classical</h6>
+                <h6 style="margin-bottom: 30px">or be classical</h6>
                 <div class="row">
                   <i class="material-icons">face</i>
                   <md-input-container color="accent">
@@ -61,6 +63,12 @@
                   <md-input-container color="accent">
                     <input type="text" mdInput placeholder="Password">
                   </md-input-container>
+                </div>
+                <div class="row">
+                  <md-checkbox style="margin-left: 2px"><p style="margin-left: 8px">I agree to the <span style="color: #9c27b0; cursor: pointer; font-weight: 400;">terms and conditions</span>.</p></md-checkbox>
+                </div>
+                <div class="row">
+                  <button md-raised-button class="btn btn-primary btn-round">GET STARTED</button>
                 </div>
               </div>
             </div>

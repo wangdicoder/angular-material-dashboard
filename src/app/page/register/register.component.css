@@ -8,6 +8,10 @@
   background: url("../../../assets/img/register_bg.jpg") no-repeat center center;
 }
 
+.register-panel{
+  margin-top: 40px;
+}
+
 .card{
   padding: 40px 110px;
 }
@@ -68,4 +72,13 @@
   position: relative;
   top: 8px;
   color: #555;
+}
+
+.form-part .socials{
+  margin-top: 40px;
+  margin-bottom: 25px;
+}
+
+.form-part .row button{
+  margin-top: 15px;
 }
