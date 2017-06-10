@@ -94,6 +94,10 @@ p {
   z-index: 0;
 }
 
+.swal2-modal{
+  outline: none;
+}
+
 /* loading style*/
 .loader {
   margin: 0 auto;
@@ -241,6 +245,8 @@ p {
   outline: none !important;
   font-weight: 300 !important;
   border-radius: 3px !important;
+  margin: 0 1px;
+  border: none !important;
 }
 
 .btn .mat-ripple{
