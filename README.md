@@ -28,3 +28,6 @@ http://128.199.249.194/
 
 ### User Profile
 ![](https://github.com/wangdicoder/angular2-material-dashboard-pro/raw/master/screenshot/profile.png)
+
+### Sweet Alert
+![](https://github.com/wangdicoder/angular2-material-dashboard-pro/raw/master/screenshot/sweetalert.gif)
