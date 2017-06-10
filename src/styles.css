@@ -178,6 +178,14 @@ p {
   #sidebar, #nav-right, #nav-left-button{
     display: none;
   }
+  #main-panel{
+    padding-left: 0;
+    -webkit-transition: all 400ms;
+    -moz-transition: all 400ms;
+    -ms-transition: all 400ms;
+    -o-transition: all 400ms;
+    transition: all 400ms;
+  }
 }
 
 /* input text style */
