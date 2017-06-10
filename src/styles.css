@@ -341,3 +341,31 @@ p {
 .mat-checkbox-anim-unchecked-checked .mat-checkbox-checkmark-path {
   animation: 300ms linear 0s mat-checkbox-unchecked-checked-checkmark-path !important;
 }
+
+/* table */
+.table-responsive{
+  border: none;
+  margin: 0;
+}
+
+.table{
+  width: 100%;
+  max-width: 100%;
+  margin: 20px 0 0 0;
+}
+
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+  padding: 12px 8px;
+  vertical-align: middle;
+}
+
+.table > thead > tr > th {
+  font-size: 1.25em;
+  font-weight: 300;
+  border-bottom-width: 1px;
+}
+
+/* text color */
+.text-primary{
+  color: #9c27b0;
+}
