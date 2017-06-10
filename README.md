@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.4.
 
+## Attention
+
+This project is still in development.
+
 ## Demo
 
 http://128.199.249.194/
@@ -15,3 +19,12 @@ http://128.199.249.194/
 ### Login
 
 ![](https://github.com/wangdicoder/angular2-material-dashboard-pro/raw/master/screenshot/login.png)
+
+### Register
+![](https://github.com/wangdicoder/angular2-material-dashboard-pro/raw/master/screenshot/register.png)
+
+### Lock
+![](https://github.com/wangdicoder/angular2-material-dashboard-pro/raw/master/screenshot/lock.png)
+
+### User Profile
+![](https://github.com/wangdicoder/angular2-material-dashboard-pro/raw/master/screenshot/profile.png)
