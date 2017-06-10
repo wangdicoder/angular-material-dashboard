@@ -222,10 +222,6 @@ p {
 }
 
 /* btn style */
-.btn-round{
-  border-radius: 30px !important;
-}
-
 .btn{
   font-size: 12px !important;
   padding: 12px 30px !important;
@@ -233,6 +229,10 @@ p {
   outline: none !important;
   font-weight: 300 !important;
   border-radius: 3px !important;
+}
+
+.btn-round{
+  border-radius: 30px !important;
 }
 
 .btn-primary{

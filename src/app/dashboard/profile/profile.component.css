@@ -32,10 +32,8 @@
   color: #999;
 }
 
-.right-profile button{
+.right-profile button {
   margin-top: 15px;
-  background-color: #e91e63;
-  font-weight: 300;
 }
 
 .card{
@@ -102,9 +100,4 @@ form{
   display: flex;
   justify-content: flex-end;
   padding-right: 15px;
-}
-
-.action-btn button{
-  background-color: #e91e63;
-  font-weight: 300;
 }
