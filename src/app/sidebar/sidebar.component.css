@@ -32,7 +32,6 @@
 }
 
 .route{
-  text-decoration: none;
   display: flex;
   align-items: center;
   font-weight: 100;
@@ -40,7 +39,8 @@
   transition: all 400ms;
 }
 
-.route a{
+.route a, .accordion, .accordion-panel a{
+  text-decoration: none;
   padding: 13px;
   display: flex;
   width: 100%;
@@ -48,18 +48,24 @@
   align-items: center;
 }
 
+.accordion{
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+}
+
 .route > a > i, p{
   color: rgba(255, 255, 255, 0.8);
   font-weight: 100;
 }
 
-.hover:hover{
+.hover:hover, .active{
   background-color: rgba(255,255,255,.1);
   transition: all 400ms;
   border-radius: 3px;
 }
 
-.route i{
+.route i, .accordion i, .accordion-panel span{
   margin-right: 15px;
 }
 
@@ -75,5 +81,25 @@
   font-weight: 300;
 }
 
+.accordion-panel{
+  max-height: 0;
+  overflow-y: hidden;
+  -webkit-transition: max-height 300ms ease-out;
+  -moz-transition: max-height 300ms ease-out;
+  -ms-transition: max-height 300ms ease-out;
+  -o-transition: max-height 300ms ease-out;
+  transition: max-height 300ms ease-out;
+}
 
+.accordion:after{
+  content: '\002B';
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: bold;
+  position: relative;
+  left: 35%;
+}
 
+.accordion.active:after{
+  content: "\2796";
+  color: rgba(255, 255, 255, 0.8);
+}

@@ -8,7 +8,7 @@ This project is still in development.
 
 ## Demo
 
-http://128.199.249.194/
+<a target="_blank">http://128.199.249.194</a>
 
 ## Screenshot
 
@@ -31,3 +31,12 @@ http://128.199.249.194/
 
 ### Sweet Alert
 ![](https://github.com/wangdicoder/angular2-material-dashboard-pro/raw/master/screenshot/sweetalert.gif)
+
+## Acknowledge 
+
+- [Creative Tim](https://github.com/creativetimofficial)
+- [Sweet Alert 2](https://github.com/limonte/sweetalert2)
+
+## License
+
+MIT

@@ -10,6 +10,14 @@
     <li routerLinkActive #profile="routerLinkActive" [ngClass]="profile.isActive ? 'route-active route' : 'route hover'">
       <a routerLink="profile"><i class="material-icons" [ngStyle]="{color: profile.isActive ? 'rgba(0,0,0,.6)' : 'rgba(255, 255, 255, 0.8)'}">person</i><p>User Profile</p></a>
     </li>
+    <li>
+      <div class="accordion hover"><i class="material-icons" style="color: rgba(255, 255, 255, 0.8)">apps</i>Components</div>
+      <div class="accordion-panel">
+        <a routerLink="/dashboard"><p><span>PT</span>Price Table</p></a>
+        <a routerLink="/dashboard"><p><span>EF</span>Extended Form</p></a>
+        <a routerLink="/dashboard"><p><span>P</span>Panel</p></a>
+      </div>
+    </li>
     <li routerLinkActive #table="routerLinkActive" [ngClass]="table.isActive ? 'route-active route' : 'route hover'">
       <a routerLink="table"><i class="material-icons" [ngStyle]="{color: table.isActive ? 'rgba(0,0,0,.6)' : 'rgba(255, 255, 255, 0.8)'}">content_paste</i><p>Table List</p></a>
     </li>
