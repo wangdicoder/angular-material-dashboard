@@ -24,6 +24,7 @@ import { RegisterComponent } from './page/register/register.component';
 import { LockComponent } from './page/lock/lock.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { SettingsComponent } from './dashboard/settings/settings.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { FooterComponent } from './shared/footer/footer.component';
     RegisterComponent,
     LockComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserModule,

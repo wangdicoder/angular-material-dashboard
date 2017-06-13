@@ -27,5 +27,8 @@
     <li routerLinkActive #alert="routerLinkActive" [ngClass]="alert.isActive ? 'route-active route' : 'route hover'">
       <a routerLink="alert"><i class="material-icons" [ngStyle]="{color: alert.isActive ? 'rgba(0,0,0,.6)' : 'rgba(255, 255, 255, 0.8)'}">warning</i><p>Sweet Alert</p></a>
     </li>
+    <li routerLinkActive #settings="routerLinkActive" [ngClass]="settings.isActive ? 'route-active route' : 'route hover'">
+      <a routerLink="settings"><i class="material-icons" [ngStyle]="{color: settings.isActive ? 'rgba(0,0,0,.6)' : 'rgba(255, 255, 255, 0.8)'}">settings</i><p>Settings</p></a>
+    </li>
   </ul>
 </div>
