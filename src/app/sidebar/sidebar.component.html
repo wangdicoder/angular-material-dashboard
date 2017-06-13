@@ -3,6 +3,8 @@
     <img src="../../assets/img/angular2-logo.png" alt="logo"/>
     <p>Material Dashboard</p>
   </div>
+  <div class="divider"></div>
+  <div style="width: 100%; height: 100%; overflow-y: auto">
   <ul class="nav links">
     <li routerLinkActive #dashboard="routerLinkActive" [ngClass]="dashboard.isActive ? 'route-active route' : 'route hover'" [routerLinkActiveOptions]="{exact: true}">
       <a routerLink="/dashboard"><i class="material-icons" [ngStyle]="{color: dashboard.isActive ? 'rgba(0,0,0,.6)' : 'rgba(255, 255, 255, 0.8)'}">dashboard</i><p>Dashboard</p></a>
@@ -31,4 +33,5 @@
       <a routerLink="settings"><i class="material-icons" [ngStyle]="{color: settings.isActive ? 'rgba(0,0,0,.6)' : 'rgba(255, 255, 255, 0.8)'}">settings</i><p>Settings</p></a>
     </li>
   </ul>
+  </div>
 </div>
