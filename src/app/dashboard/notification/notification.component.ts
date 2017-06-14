@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+declare const $: any;
 
 @Component({
   selector: 'app-notification',
@@ -10,6 +11,10 @@ export class NotificationComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  btnNotify() {
+    $.notify('Hello World');
   }
 
 }
