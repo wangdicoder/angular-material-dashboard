@@ -15,9 +15,9 @@
     <li>
       <div class="accordion hover"><i class="material-icons" style="color: rgba(255, 255, 255, 0.8)">apps</i>Components</div>
       <div class="accordion-panel">
-        <a routerLink="/dashboard"><p><span>PT</span>Price Table</p></a>
-        <a routerLink="/dashboard"><p><span>EF</span>Extended Form</p></a>
-        <a routerLink="/dashboard"><p><span>P</span>Panel</p></a>
+        <a routerLink="/dashboard"><p class="span">PT</p><p>Price Table</p></a>
+        <a routerLink="/dashboard"><p class="span">EF</p><p>Extended Form</p></a>
+        <a routerLink="/dashboard"><p class="span">P</p><p>Panel</p></a>
       </div>
     </li>
     <li routerLinkActive #table="routerLinkActive" [ngClass]="table.isActive ? 'route-active route' : 'route hover'">

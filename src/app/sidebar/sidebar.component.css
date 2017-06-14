@@ -113,3 +113,8 @@
   content: "\2796";
   color: rgba(255, 255, 255, 0.8);
 }
+
+.accordion-panel .span{
+  width: 35px;
+  margin-left: 5px;
+}
