@@ -14,7 +14,14 @@ export class NotificationComponent implements OnInit {
   }
 
   btnNotify() {
-    $.notify('Hello World');
+    $.notify({
+      message: 'Welcome to <b>MATERIAL DASHBOARD</b> - a beautiful dashboard for every web developer.'
+    }, {
+      placement: {
+        from: 'top',
+        align: 'left'
+      }
+    });
   }
 
 }
