@@ -59,6 +59,7 @@
 }
 
 .accordion{
+  position: relative;
   margin-top: 10px;
   color: rgba(255, 255, 255, 0.8);
   cursor: pointer;
@@ -101,20 +102,32 @@
   transition: max-height 300ms ease-out;
 }
 
-.accordion:after{
-  content: '\002B';
-  color: rgba(255, 255, 255, 0.8);
-  font-weight: bold;
-  position: relative;
-  left: 35%;
-}
-
-.accordion.active:after{
-  content: "\2796";
-  color: rgba(255, 255, 255, 0.8);
-}
-
 .accordion-panel .span{
   width: 35px;
   margin-left: 5px;
+}
+
+.accordion .caret{
+  position: absolute;
+  right: 20px;
+  top: 23px;
+  color: #fff;
+  -webkit-transition: transform 200ms;
+  -moz-transition: transform 200ms;
+  -ms-transition: transform 200ms;
+  -o-transition: transform 200ms;
+  transition: transform 200ms;
+}
+
+.accordion.active .caret{
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+  -webkit-transition: transform 200ms;
+  -moz-transition: transform 200ms;
+  -ms-transition: transform 200ms;
+  -o-transition: transform 200ms;
+  transition: transform 200ms;
 }
