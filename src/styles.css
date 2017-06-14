@@ -64,6 +64,10 @@ a:hover{
   text-decoration: none;
 }
 
+b{
+  font-weight: 300;
+}
+
 .subtitle{
   margin-top: 15px;
   color: #3C4858;
@@ -394,27 +398,27 @@ a:hover{
 }
 
 /* text color */
-.text-primary{
+.text-primary, .alert-primary .alert-icon{
   color: #9c27b0;
 }
 
-.text-danger{
+.text-danger, .alert-danger .alert-icon{
   color: #f44336;
 }
 
-.text-info{
+.text-info, .alert-info .alert-icon{
   color: #00bcd4;
 }
 
-.text-warning{
+.text-warning, .alert-warning .alert-icon{
   color: #ff9800;
 }
 
-.text-rose{
+.text-rose, .alert-rose .alert-icon{
   color: #e91e63;
 }
 
-.text-success{
+.text-success, .alert-success .alert-icon{
   color: #4caf50;
 }
 
@@ -493,12 +497,4 @@ a:hover{
   font-size: 20px;
   padding: 9px;
   box-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.42), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
-}
-
-.alert-info .alert-icon{
-  color: #00bcd4;
-}
-
-.alert-rose .alert-icon{
-  color: #eb3573;
 }
