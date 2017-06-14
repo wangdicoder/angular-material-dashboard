@@ -25,6 +25,8 @@ import { LockComponent } from './page/lock/lock.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { SettingsComponent } from './dashboard/settings/settings.component';
+import { PriceTableComponent } from './dashboard/component/pricetable/pricetable.component';
+import { PanelsComponent } from './dashboard/component/panels/panels.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,9 @@ import { SettingsComponent } from './dashboard/settings/settings.component';
     LockComponent,
     HeaderComponent,
     FooterComponent,
-    SettingsComponent
+    SettingsComponent,
+    PriceTableComponent,
+    PanelsComponent
   ],
   imports: [
     BrowserModule,
