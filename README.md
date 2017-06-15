@@ -32,6 +32,10 @@ This project is still in development.
 ### Sweet Alert
 ![](https://github.com/wangdicoder/angular2-material-dashboard-pro/raw/master/screenshot/sweetalert.gif)
 
+### Notification
+![](https://github.com/wangdicoder/angular2-material-dashboard-pro/raw/master/screenshot/notification.gif)
+
+
 ## Acknowledge 
 
 - [Creative Tim](https://github.com/creativetimofficial)

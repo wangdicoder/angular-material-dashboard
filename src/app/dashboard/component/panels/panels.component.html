@@ -1,4 +1,35 @@
 <div class="container">
   <app-navbar title="Panels"></app-navbar>
-
+  <div class="row page-title">
+    <div class="col-md-6">
+      <div class="card">
+        <h4>Navigation Pills - <small>Horizontal Tabs</small></h4>
+        <div class="h-tab">
+          <div class="tab">
+            <button md-raised-button class="btn btn-warning btn-round tab-link default-active" (click)="tabClick($event, 'profile')">PROFILE</button>
+            <button md-raised-button class="btn btn-warning btn-round tab-link" (click)="tabClick($event, 'settings')">SETTINGS</button>
+            <button md-raised-button class="btn btn-warning btn-round tab-link" (click)="tabClick($event, 'options')">OPTIONS</button>
+          </div>
+          <div id="profile" class="tab-content">
+            Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits.<br/><br/>
+            Dramatically visualize customer directed convergence without revolutionary ROI. Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits.<br/><br/>
+            This is very nice.
+          </div>
+          <div id="settings" class="tab-content">
+            Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas.<br/><br/>
+            Dramatically maintain clicks-and-mortar solutions without functional solutions.
+          </div>
+          <div id="options" class="tab-content">
+            Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas.<br/><br/>
+            Dynamically innovate resource-leveling customer service for state of the art customer service.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card">
+        <h4>Navigation Pills - <small>Vertical Tabs</small></h4>
+      </div>
+    </div>
+  </div>
 </div>
