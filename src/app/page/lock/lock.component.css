@@ -6,6 +6,7 @@
 
 .background{
   background: url("../../../assets/img/lock_bg.jpg") no-repeat center center;
+  background-size: cover;
 }
 
 .card{

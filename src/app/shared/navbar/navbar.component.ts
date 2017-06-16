@@ -12,4 +12,7 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {
   }
 
+  menuClick() {
+    document.getElementById('main-panel').style.marginRight = '260px';
+  }
 }

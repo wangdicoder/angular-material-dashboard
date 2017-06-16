@@ -198,9 +198,18 @@ b{
   }
 }
 
+@media screen and (min-width: 991px){
+  #menu{
+    display: none;
+  }
+}
+
 @media screen and (max-width: 990px){
   #sidebar, #nav-right, #nav-left-button{
     display: none;
+  }
+  #menu{
+    display: inline;
   }
   #main-panel{
     padding-left: 0;
