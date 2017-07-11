@@ -6,10 +6,6 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 This project is still in development.
 
-## Demo
-
-<a target="_blank">http://128.199.249.194</a>
-
 ## Screenshot
 
 ### Dashboard
