@@ -1,3 +1,9 @@
+.sidebar-btn{
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
 .sidebar-bg{
   max-width: 100%;
   border-radius: 10px;

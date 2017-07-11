@@ -28,6 +28,8 @@ import { SettingsComponent } from './dashboard/settings/settings.component';
 import { PriceTableComponent } from './dashboard/component/pricetable/pricetable.component';
 import { PanelsComponent } from './dashboard/component/panels/panels.component';
 
+import { SidebarBgServiceService } from './services/sidebar-bg-service.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -63,7 +65,7 @@ import { PanelsComponent } from './dashboard/component/panels/panels.component';
     MdMenuModule,
     MdCheckboxModule
   ],
-  providers: [],
+  providers: [SidebarBgServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
