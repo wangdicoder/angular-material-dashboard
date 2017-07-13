@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SidebarBgServiceService } from '../../services/sidebar-bg-service.service';
+import { SettingsService } from '../../services/settings.service';
 
 @Component({
   selector: 'app-settings',
@@ -8,7 +8,7 @@ import { SidebarBgServiceService } from '../../services/sidebar-bg-service.servi
 })
 export class SettingsComponent implements OnInit {
 
-  constructor(public sidebarService: SidebarBgServiceService) { }
+  constructor(public sidebarService: SettingsService) { }
 
   ngOnInit() {
     const defaultId = this.sidebarService.getSidebarIndex();

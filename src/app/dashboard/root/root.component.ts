@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { SidebarBgServiceService } from '../../services/sidebar-bg-service.service';
+import { SettingsService } from '../../services/settings.service';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +8,7 @@ import { SidebarBgServiceService } from '../../services/sidebar-bg-service.servi
 })
 export class RootComponent implements OnInit, OnDestroy {
   public id: number;
-  constructor(public sidebarService: SidebarBgServiceService) {
+  constructor(public sidebarService: SettingsService) {
     this.id = sidebarService.getSidebarIndex();
   }
 

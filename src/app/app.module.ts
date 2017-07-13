@@ -28,7 +28,7 @@ import { SettingsComponent } from './dashboard/settings/settings.component';
 import { PriceTableComponent } from './dashboard/component/pricetable/pricetable.component';
 import { PanelsComponent } from './dashboard/component/panels/panels.component';
 
-import { SidebarBgServiceService } from './services/sidebar-bg-service.service';
+import { SettingsService } from './services/settings.service';
 
 @NgModule({
   declarations: [
@@ -65,7 +65,7 @@ import { SidebarBgServiceService } from './services/sidebar-bg-service.service';
     MdMenuModule,
     MdCheckboxModule
   ],
-  providers: [SidebarBgServiceService],
+  providers: [SettingsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -28,3 +28,48 @@
 .sidebar-btn .active{
   border-color: #00bbff;
 }
+
+.dot-row{
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 40px 0;
+}
+
+.dot{
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+}
+
+.purple{
+  background-color: #9c27b0;
+}
+
+.blue{
+  background-color: #00bcd4;
+}
+
+.green{
+  background-color: #4caf50;
+}
+
+.orange{
+  background-color: #ff9800;
+}
+
+.red{
+  background-color: #f44336;
+}
+
+.white{
+  background-color: rgba(200, 200, 200, 0.2);
+}
+
+.rose{
+  background-color: #e91e63;
+}
+
+.black{
+  background-color: #000;
+}
