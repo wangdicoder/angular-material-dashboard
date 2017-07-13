@@ -4,10 +4,11 @@
   outline: none;
 }
 
-.sidebar-bg{
+.sidebar-img{
   max-width: 100%;
   border-radius: 10px;
   margin-top: 10px;
+  cursor: pointer;
   -webkit-transition: all 400ms;
   -moz-transition: all 400ms;
   -ms-transition: all 400ms;
@@ -16,7 +17,7 @@
   border: 4px solid transparent;
 }
 
-.sidebar-bg:hover{
+.sidebar-img:hover{
   border-color: rgba(0, 187, 255, 0.5);
   -webkit-transition: all 400ms;
   -moz-transition: all 400ms;
@@ -25,7 +26,7 @@
   transition: all 400ms;
 }
 
-.sidebar-btn .active{
+.background-image .active{
   border-color: #00bbff;
 }
 

@@ -12,17 +12,17 @@ export class SettingsComponent implements OnInit {
 
   ngOnInit() {
     const defaultId = this.settingService.getSidebarImageIndex();
-    const sideBtns: HTMLCollection = document.getElementsByClassName('sidebar-btn');
-    sideBtns[defaultId - 1].children[0].className = sideBtns[defaultId - 1].children[0].className + ' active';
+    const sidebarImgs: HTMLCollection = document.getElementsByClassName('sidebar-img');
+    sidebarImgs[defaultId].className = sidebarImgs[defaultId].className + ' active';
   }
 
   bgChooseClick(id) {
     this.settingService.setSidebarImageIndex(id);
-    const sideBtns: HTMLCollection = document.getElementsByClassName('sidebar-btn');
-    for (let i = 0; i < sideBtns.length; i++){
-      sideBtns[i].children[0].className = sideBtns[i].children[0].className.replace(' active', '');
+    const sidebarImgs: HTMLCollection = document.getElementsByClassName('sidebar-img');
+    for (let i = 0; i < sidebarImgs.length; i++) {
+      sidebarImgs[i].className = sidebarImgs[i].className.replace(' active', '');
     }
-    sideBtns[id - 1].children[0].className = sideBtns[id - 1].children[0].className + ' active';
+    sidebarImgs[id].className = sidebarImgs[id].className + ' active';
   }
 
   filterChooseClick(id) {

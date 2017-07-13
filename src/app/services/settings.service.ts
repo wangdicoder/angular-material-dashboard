@@ -2,7 +2,7 @@ import { Injectable, EventEmitter } from '@angular/core';
 
 @Injectable()
 export class SettingsService {
-  public sidebarImageIndex = 1;
+  public sidebarImageIndex = 0;
   public sidebarImageIndexUpdate: EventEmitter<number> = new EventEmitter();
   public sidebarFilter = '#fff';
   public sidebarFilterUpdate: EventEmitter<string> = new EventEmitter();
