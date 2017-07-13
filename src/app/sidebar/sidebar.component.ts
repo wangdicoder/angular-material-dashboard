@@ -1,5 +1,6 @@
 import {AfterViewInit, Component, OnInit, OnDestroy} from '@angular/core';
 import { SettingsService } from '../services/settings.service';
+import { ROUTES } from './sidebar-routes.config';
 
 @Component({
   selector: 'app-sidebar',
@@ -8,12 +9,22 @@ import { SettingsService } from '../services/settings.service';
 })
 export class SidebarComponent implements OnInit, AfterViewInit, OnDestroy {
   public color: string;
-  constructor(public setingsService: SettingsService) { }
+  public menuItems: object;
+  public activeFontColor: string;
+  constructor(public setingsService: SettingsService) {
+    this.menuItems = ROUTES;
+    this.activeFontColor = 'rgba(0,0,0,.6)';
+  }
 
   ngOnInit() {
     this.color = this.setingsService.getSidebarFilter();
     this.setingsService.sidebarFilterUpdate.subscribe((filter: string) => {
       this.color = filter;
+      if (filter === '#fff') {
+        this.activeFontColor = 'rgba(0,0,0,.6)';
+      }else {
+        this.activeFontColor = 'rgba(255,255,255,.8)';
+      }
     });
   }
   ngOnDestroy() {
@@ -21,17 +32,5 @@ export class SidebarComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit() {
-    const accordions = document.getElementsByClassName('accordion');
-    for (let i = 0; i < accordions.length; i++) {
-      accordions[i].addEventListener('click', function () {
-        const panel = <HTMLElement>accordions[i].nextElementSibling;
-        accordions[i].classList.toggle('active');
-        if (panel.style.maxHeight) {
-          panel.style.maxHeight = null;
-        } else {
-          panel.style.maxHeight = panel.scrollHeight + 'px';
-        }
-      });
-    }
   }
 }
