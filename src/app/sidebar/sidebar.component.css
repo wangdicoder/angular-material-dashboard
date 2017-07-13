@@ -13,12 +13,11 @@
   left: 13px;
 }
 
-.logo:after{
+.divider{
   content: '';
-  position: absolute;
-  bottom: 0;
-  right: 15px;
+  position: relative;
   height: 1px;
+  left: 15px;
   width: calc(100% - 30px);
   background-color: rgba(255, 255, 255, 0.5);
 }
@@ -62,7 +61,6 @@
 
 .nav li a span{
   margin-left: 20px;
-  font-weight: 100;
 }
 
 .active a, .active a:hover{

@@ -1,12 +1,13 @@
-<div class="logo text-uppercase">
+<div class="logo text-uppercase" [style.color]="normalFontColor">
   <img src="../../assets/img/angular2-logo.png" class="logo-img" alt="logo"/>
   Dashboard Pro
 </div>
+<div class="divider" [style.background-color]="dividerBgColor"></div>
 <div class="sidebar-wrapper">
   <div class="nav-container">
     <ul class="nav">
       <li *ngFor="let menuItem of menuItems" routerLinkActive #rla="routerLinkActive" [ngClass]="rla.isActive? 'active' : ''" [routerLinkActiveOptions]="{exact: true}">
-        <a [routerLink]="[menuItem.path]" [style.background-color]="rla.isActive? color : 'transparent'" [style.color]="rla.isActive? activeFontColor : 'rgba(255,255,255,.8)'">
+        <a [routerLink]="[menuItem.path]" [style.background-color]="rla.isActive? color : 'transparent'" [style.color]="rla.isActive? activeFontColor : normalFontColor">
           <i class="material-icons">{{menuItem.icon}}</i>
           <span>{{menuItem.title}}</span>
         </a>
