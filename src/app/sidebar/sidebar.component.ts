@@ -1,15 +1,23 @@
-import {AfterViewInit, Component, OnInit} from '@angular/core';
+import {AfterViewInit, Component, OnInit, OnDestroy} from '@angular/core';
+import { SettingsService } from '../services/settings.service';
 
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.css']
 })
-export class SidebarComponent implements OnInit, AfterViewInit {
-
-  constructor() { }
+export class SidebarComponent implements OnInit, AfterViewInit, OnDestroy {
+  public color: string;
+  constructor(public setingsService: SettingsService) { }
 
   ngOnInit() {
+    this.color = this.setingsService.getSidebarFilter();
+    this.setingsService.sidebarFilterUpdate.subscribe((filter: string) => {
+      this.color = filter;
+    });
+  }
+  ngOnDestroy() {
+    this.setingsService.sidebarFilterUpdate.unsubscribe();
   }
 
   ngAfterViewInit() {

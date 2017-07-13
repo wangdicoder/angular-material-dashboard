@@ -25,8 +25,8 @@ export class SettingsComponent implements OnInit {
     sidebarImgs[id].className = sidebarImgs[id].className + ' active';
   }
 
-  filterChooseClick(id) {
-    console.log(id);
+  filterChooseClick(color) {
+    this.settingService.setSidebarFilter(color);
   }
 
   bgColorChooseClick(color) {
