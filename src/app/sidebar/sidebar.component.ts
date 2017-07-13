@@ -42,6 +42,7 @@ export class SidebarComponent implements OnInit, AfterViewInit, OnDestroy {
   }
   ngOnDestroy() {
     this.settingsService.sidebarFilterUpdate.unsubscribe();
+    this.settingsService.sidebarColorUpdate.unsubscribe();
   }
 
   ngAfterViewInit() {
