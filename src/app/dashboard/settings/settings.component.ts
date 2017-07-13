@@ -8,16 +8,16 @@ import { SettingsService } from '../../services/settings.service';
 })
 export class SettingsComponent implements OnInit {
 
-  constructor(public sidebarService: SettingsService) { }
+  constructor(public settingService: SettingsService) { }
 
   ngOnInit() {
-    const defaultId = this.sidebarService.getSidebarIndex();
+    const defaultId = this.settingService.getSidebarImageIndex();
     const sideBtns: HTMLCollection = document.getElementsByClassName('sidebar-btn');
     sideBtns[defaultId - 1].children[0].className = sideBtns[defaultId - 1].children[0].className + ' active';
   }
 
   bgChooseClick(id) {
-    this.sidebarService.setSideBarIndex(id);
+    this.settingService.setSidebarImageIndex(id);
     const sideBtns: HTMLCollection = document.getElementsByClassName('sidebar-btn');
     for (let i = 0; i < sideBtns.length; i++){
       sideBtns[i].children[0].className = sideBtns[i].children[0].className.replace(' active', '');
@@ -25,4 +25,11 @@ export class SettingsComponent implements OnInit {
     sideBtns[id - 1].children[0].className = sideBtns[id - 1].children[0].className + ' active';
   }
 
+  filterChooseClick(id) {
+    console.log(id);
+  }
+
+  bgColorChooseClick(color) {
+    this.settingService.setSidebarColor(color);
+  }
 }

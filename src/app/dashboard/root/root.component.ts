@@ -8,18 +8,23 @@ import { SettingsService } from '../../services/settings.service';
 })
 export class RootComponent implements OnInit, OnDestroy {
   public id: number;
-  constructor(public sidebarService: SettingsService) {
-    this.id = sidebarService.getSidebarIndex();
+  public backgroundColor: string;
+  constructor(public settingService: SettingsService) {
+    this.id = settingService.getSidebarImageIndex();
+    this.backgroundColor = settingService.getSidebarColor();
   }
 
   ngOnInit() {
-    this.sidebarService.sidebarIndexUpdate.subscribe((id: number) => {
+    this.settingService.sidebarImageIndexUpdate.subscribe((id: number) => {
       this.id = id;
-      console.log(id);
+    });
+    this.settingService.sidebarColorUpdate.subscribe((color: string) => {
+      this.backgroundColor = color;
     });
   }
 
   ngOnDestroy() {
-    this.sidebarService.sidebarIndexUpdate.unsubscribe();
+    this.settingService.sidebarImageIndexUpdate.unsubscribe();
+    this.settingService.sidebarColorUpdate.unsubscribe();
   }
 }

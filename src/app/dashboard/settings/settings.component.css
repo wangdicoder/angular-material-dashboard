@@ -40,6 +40,7 @@
   width: 30px;
   height: 30px;
   margin: 0 10px;
+  cursor: pointer;
 }
 
 .purple{
@@ -48,6 +49,10 @@
 
 .blue{
   background-color: #00bcd4;
+}
+
+.dodgerblue{
+  background-color: dodgerblue;
 }
 
 .green{
