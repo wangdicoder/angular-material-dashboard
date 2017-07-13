@@ -4,17 +4,17 @@
   z-index: 1;
 }
 
-.background{
-  background: url("../../../assets/img/register_bg.jpg") no-repeat center center;
+.background {
+  background: url("../../../assets/img/register_bg.jpg") center center;
   background-size: cover;
 }
 
 .register-panel{
-  margin-top: 40px;
+  margin-top: 25px;
 }
 
 .card{
-  padding: 40px;
+  padding: 40px 0 30px;
 }
 
 .card h2{

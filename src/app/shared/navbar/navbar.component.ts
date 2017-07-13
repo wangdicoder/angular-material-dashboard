@@ -13,6 +13,6 @@ export class NavbarComponent implements OnInit {
   }
 
   menuClick() {
-    document.getElementById('main-panel').style.marginRight = '260px';
+   // document.getElementById('main-panel').style.marginRight = '260px';
   }
 }
