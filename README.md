@@ -11,6 +11,11 @@ Material-design Dashboard
 3. npm install
 4. ng serve -o (it will automatically open localhost:4200)
 
+## Further Plan
+- [ ] Add Wizard Component
+- [ ] Responsive Sidebar
+- [ ] Consolidate form elements, like switch
+
 ## Screenshot
 
 ### Dashboard
