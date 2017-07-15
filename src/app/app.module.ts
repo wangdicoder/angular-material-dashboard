@@ -29,6 +29,7 @@ import { PriceTableComponent } from './dashboard/component/pricetable/pricetable
 import { PanelsComponent } from './dashboard/component/panels/panels.component';
 
 import { SettingsService } from './services/settings.service';
+import { WizardComponent } from './dashboard/component/wizard/wizard.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { SettingsService } from './services/settings.service';
     FooterComponent,
     SettingsComponent,
     PriceTableComponent,
-    PanelsComponent
+    PanelsComponent,
+    WizardComponent
   ],
   imports: [
     BrowserModule,
