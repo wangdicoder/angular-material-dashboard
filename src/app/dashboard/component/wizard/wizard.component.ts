@@ -22,7 +22,6 @@ export class WizardComponent implements OnInit, AfterViewInit {
       if (screenWidth > 990) {
         if (this.tabIndex === 1) {
           moveTab.style.left = '20vw';
-          console.log('111');
         } else if (this.tabIndex === 2) {
           moveTab.style.left = '41vw';
         }
@@ -34,13 +33,21 @@ export class WizardComponent implements OnInit, AfterViewInit {
         }
       }
     });
+    const tabs = document.getElementsByClassName('wizard-tab');
+    for (let i = 1; i < tabs.length; i++) {
+      (<HTMLElement>tabs[i]).style.display = 'none';
+    }
   }
 
   preOnClick() {
     const moveTab = <HTMLElement>document.querySelector('.move-tab');
     const nextBtn = <HTMLElement>document.getElementById('nextBtn');
     const preBtn = <HTMLElement>document.getElementById('preBtn');
+    const tabs = document.getElementsByClassName('wizard-tab');
     const screenWidth = document.body.clientWidth;
+    for (let i = 0; i < tabs.length; i++) {
+      (<HTMLElement>tabs[i]).style.display = 'none';
+    }
     if (this.tabIndex === 2) {
       this.tabIndex--;
       moveTab.style.left = screenWidth > 990 ? '20vw' : '30vw';
@@ -52,13 +59,18 @@ export class WizardComponent implements OnInit, AfterViewInit {
       preBtn.style.visibility = 'hidden';
       moveTab.innerHTML = 'About';
     }
+    (<HTMLElement>tabs[this.tabIndex]).style.display = 'inherit';
   }
 
   nextOnClick() {
     const moveTab = <HTMLElement>document.querySelector('.move-tab');
     const nextBtn = <HTMLElement>document.getElementById('nextBtn');
     const preBtn = <HTMLElement>document.getElementById('preBtn');
+    const tabs = document.getElementsByClassName('wizard-tab');
     const screenWidth = document.body.clientWidth;
+    for (let i = 0; i < tabs.length; i++) {
+      (<HTMLElement>tabs[i]).style.display = 'none';
+    }
     if (this.tabIndex === 0) {
       this.tabIndex++;
       moveTab.style.left = screenWidth > 990 ? '20vw' : '30vw';
@@ -70,6 +82,7 @@ export class WizardComponent implements OnInit, AfterViewInit {
       nextBtn.style.visibility = 'hidden';
       moveTab.innerHTML = 'Address';
     }
+    (<HTMLElement>tabs[this.tabIndex]).style.display = 'inherit';
   }
 
 }
