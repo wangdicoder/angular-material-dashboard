@@ -35,7 +35,7 @@
   color: #fff;
   top: -2px;
   left: -1vw;
-  width: 35%;
+  width: calc((100% - 260px) / 2);
   height: 114%;
   display: flex;
   justify-content: center;

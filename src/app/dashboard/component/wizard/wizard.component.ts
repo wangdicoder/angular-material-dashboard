@@ -20,12 +20,14 @@ export class WizardComponent implements OnInit, AfterViewInit {
     $(window).resize(() => {
       const screenWidth = document.body.clientWidth;
       if (screenWidth > 990) {
+        moveTab.style.width = 'calc((100% - 260px) / 2)';
         if (this.tabIndex === 1) {
           moveTab.style.left = '20vw';
         } else if (this.tabIndex === 2) {
-          moveTab.style.left = '41vw';
+          moveTab.style.left = '42vw';
         }
       } else {
+        moveTab.style.width = '34%';
         if (this.tabIndex === 1) {
           moveTab.style.left = '30vw';
         } else if (this.tabIndex === 2) {
@@ -78,7 +80,7 @@ export class WizardComponent implements OnInit, AfterViewInit {
       moveTab.innerHTML = 'Account';
     }else if (this.tabIndex === 1) {
       this.tabIndex++;
-      moveTab.style.left = screenWidth > 990 ? '41vw' : '61.5vw';
+      moveTab.style.left = screenWidth > 990 ? '42vw' : '61.5vw';
       nextBtn.style.visibility = 'hidden';
       moveTab.innerHTML = 'Address';
     }

@@ -12,7 +12,7 @@ Material-design Dashboard
 4. ng serve -o (it will automatically open localhost:4200)
 
 ## Further Plan
-- [ ] Add Wizard Component
+- [x] Add Wizard Component
 - [ ] Responsive Sidebar
 - [ ] Consolidate form elements, like switch
 
