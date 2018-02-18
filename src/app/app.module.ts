@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { routing } from './app.routes';
-import { MdButtonModule, MdRadioModule, MdInputModule, MdMenuModule, MdCheckboxModule } from '@angular/material';
+import { MatButtonModule, MatRadioModule, MatInputModule, MatMenuModule, MatCheckboxModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
@@ -61,11 +61,11 @@ import { WizardComponent } from './dashboard/component/wizard/wizard.component';
     HttpModule,
     routing,
     BrowserAnimationsModule,
-    MdButtonModule,
-    MdRadioModule,
-    MdInputModule,
-    MdMenuModule,
-    MdCheckboxModule
+    MatButtonModule,
+    MatRadioModule,
+    MatInputModule,
+    MatMenuModule,
+    MatCheckboxModule
   ],
   providers: [SettingsService],
   bootstrap: [AppComponent]
