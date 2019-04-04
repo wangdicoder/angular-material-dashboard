@@ -6,7 +6,7 @@ export class SettingsService {
   public sidebarImageIndexUpdate: EventEmitter<number> = new EventEmitter();
   public sidebarFilter = '#fff';
   public sidebarFilterUpdate: EventEmitter<string> = new EventEmitter();
-  public sidebarColor = '#D80B0B';
+  public sidebarColor = '#000';
   public sidebarColorUpdate: EventEmitter<string> = new EventEmitter();
 
   constructor() { }

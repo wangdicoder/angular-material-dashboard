@@ -25,7 +25,8 @@
                 </div>
                 <div class="desc">
                   <h4>Fully Coded in HTML5</h4>
-                  <p>We've developed the website with HTML5 and CSS3. The client has access to the code using GitHub.</p>
+                  <p>We've developed the website with HTML5 and CSS3. The client has access to the code using GitHub.
+                  </p>
                 </div>
               </div>
               <div class="feature">
@@ -39,7 +40,7 @@
               </div>
             </div>
             <div class="col-md-5">
-              <div class="form-part">
+              <form [formGroup]="formRegister" class="form-part" (ngSubmit)="onRegister()">
                 <div class="socials">
                   <a mat-mini-fab style="background-color: #55acee;"><i class="fa fa-twitter"></i></a>
                   <a mat-mini-fab style="background-color: #ea4c89; margin: 0 5px;"><i class="fa fa-dribbble"></i></a>
@@ -49,28 +50,31 @@
                 <div class="row">
                   <i class="material-icons">face</i>
                   <mat-form-field color="accent">
-                    <input type="text" matInput placeholder="Name">
+                    <input formControlName="name" type="text" matInput placeholder="Name">
                   </mat-form-field>
                 </div>
                 <div class="row">
                   <i class="material-icons">email</i>
                   <mat-form-field color="accent">
-                    <input type="text" matInput placeholder="Email">
+                    <input formControlName="email" type="text" matInput placeholder="Email">
                   </mat-form-field>
                 </div>
                 <div class="row">
                   <i class="material-icons">lock_outline</i>
                   <mat-form-field color="accent">
-                    <input type="text" matInput placeholder="Password">
+                    <input formControlName="password" type="password" matInput placeholder="Password">
                   </mat-form-field>
                 </div>
                 <div class="row">
-                  <mat-checkbox style="margin-left: 2px"><p style="margin-left: 8px">I agree to the <span style="color: #9c27b0; cursor: pointer; font-weight: 400;">terms and conditions</span>.</p></mat-checkbox>
+                  <mat-checkbox style="margin-left: 2px">
+                    <p style="margin-left: 8px">I agree to the <span
+                        style="color: #9c27b0; cursor: pointer; font-weight: 400;">terms and conditions</span>.</p>
+                  </mat-checkbox>
                 </div>
                 <div class="row" style="display: flex; justify-content: center">
-                  <button mat-raised-button class="btn btn-primary btn-round">GET STARTED</button>
+                  <button type="submit" mat-raised-button class="btn btn-primary btn-round">GET STARTED</button>
                 </div>
-              </div>
+              </form>
             </div>
           </div>
         </div>
