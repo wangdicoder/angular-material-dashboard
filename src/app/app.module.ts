@@ -30,7 +30,7 @@ import { PanelsComponent } from './dashboard/component/panels/panels.component';
 
 import { SettingsService } from './services/settings.service';
 import { WizardComponent } from './dashboard/component/wizard/wizard.component';
-
+import { AmplifyAngularModule, AmplifyService } from 'aws-amplify-angular';
 @NgModule({
   declarations: [
     AppComponent,
@@ -66,9 +66,10 @@ import { WizardComponent } from './dashboard/component/wizard/wizard.component';
     MatInputModule,
     MatMenuModule,
     MatCheckboxModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AmplifyAngularModule
   ],
-  providers: [SettingsService],
+  providers: [SettingsService, AmplifyService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

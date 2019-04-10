@@ -13,7 +13,7 @@ export class AuthService {
   }
 
   onLogout() {
-    
+
   }
 
   onRegister(user: User) {

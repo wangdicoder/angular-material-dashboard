@@ -1,0 +1,14 @@
+{
+    "env": {
+        "awscloudformation": {
+            "AuthRoleName": "angularmaterialdashb-20190410180855-authRole",
+            "UnauthRoleArn": "arn:aws:iam::353300492076:role/angularmaterialdashb-20190410180855-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::353300492076:role/angularmaterialdashb-20190410180855-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "angularmaterialdashb-20190410180855-deployment",
+            "UnauthRoleName": "angularmaterialdashb-20190410180855-unauthRole",
+            "StackName": "angularmaterialdashb-20190410180855",
+            "StackId": "arn:aws:cloudformation:us-east-1:353300492076:stack/angularmaterialdashb-20190410180855/08a439c0-5b81-11e9-9a5d-0a9be5775b42"
+        }
+    }
+}
