@@ -4,7 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { routing } from './app.routes';
-import { MatButtonModule, MatRadioModule, MatInputModule, MatMenuModule, MatCheckboxModule } from '@angular/material';
+import { MatButtonModule, MatRadioModule, MatInputModule, MatMenuModule, MatCheckboxModule, MatFormField, MatFormFieldModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
@@ -31,43 +31,31 @@ import { PanelsComponent } from './dashboard/component/panels/panels.component';
 import { SettingsService } from './services/settings.service';
 import { WizardComponent } from './dashboard/component/wizard/wizard.component';
 import { AmplifyAngularModule, AmplifyService } from 'aws-amplify-angular';
+import { CoreModule } from './core/core.module';
+import { SharedModule } from './shared/shared.module';
+import { RouterModule } from '@angular/router';
 @NgModule({
   declarations: [
     AppComponent,
-    SidebarComponent,
-    HomeComponent,
-    ProfileComponent,
-    NavbarComponent,
-    FigurecardComponent,
-    ImagecardComponent,
-    TableComponent,
-    NotificationComponent,
-    MsgIconBtnComponent,
-    SweetAlertComponent,
     LoginComponent,
-    RootComponent,
     RegisterComponent,
-    LockComponent,
-    HeaderComponent,
-    FooterComponent,
-    SettingsComponent,
-    PriceTableComponent,
-    PanelsComponent,
-    WizardComponent
+    LockComponent
   ],
   imports: [
     BrowserModule,
+    RouterModule,
     FormsModule,
     HttpModule,
     routing,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
+    AmplifyAngularModule,
+    SharedModule,
     MatButtonModule,
     MatRadioModule,
     MatInputModule,
     MatMenuModule,
-    MatCheckboxModule,
-    ReactiveFormsModule,
-    AmplifyAngularModule
+    MatCheckboxModule
   ],
   providers: [SettingsService, AmplifyService],
   bootstrap: [AppComponent]

@@ -1,0 +1,181 @@
+
+.contact_grid_right input[type="text"], .contact_grid_right input[type="email"], .contact_grid_right textarea {
+    outline: none;
+    padding: 15px 15px;
+    font-size: 14px;
+    color: #777;
+    background: #f6f9fb;
+    width: 100%;
+    letter-spacing: 1px;
+    border: none;
+    border: 1px solid #ddd;
+}
+.contact_grid_right input[type="text"]:nth-child(2), .contact_grid_right input[type="email"] {
+    margin: 1em 0 0;
+}
+.contact_grid_right textarea {
+    min-height: 150px;
+    margin: 1em 1.1em;
+    width: 95.3% !important;
+    resize: none;
+}
+.contact_grid_right input[type="submit"], .contact_grid_right input[type="reset"] {
+    outline: none;
+    padding: 15px 0;
+    font-size: 14px;
+    color: #fff;
+    background: #000000;
+    width: 45.6%;
+    border: none;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-left: 1.4em;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    transition: 0.5s all;
+    font-weight: 700;
+}
+.contact-left h4 {
+    color: #444;
+    font-size: 1em;
+    margin-bottom: .5em;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+.contact-left p {
+    font-size:1em;
+    letter-spacing: 1px;
+}
+.contact-text a {
+    color:#888;
+}
+.contact-text a:hover{
+    color: #fb383b;
+}
+.contact-left span.fa {
+    width: 50px;
+    height: 50px;
+    background: none;
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 2.4em;
+    border: 4px solid #383737;
+    color: #fb383b;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.mail-us {
+    margin: 1.5em 0;
+}
+.call {
+    margin-bottom: 1.5em;
+}
+.contact_grid_right h6,.contact-left h6 {
+    font-size: 1.2em;
+    color: #ff322e;
+    margin-bottom: 1.5em;
+    padding-left: 16px;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+.map {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+}
+.contact-map iframe {
+    width: 100%;
+    height: 350px;
+}
+/*--//contact--*/
+/*--responsive--*/
+
+@media(max-width:991px) {
+   .contact_grid_right textarea {
+		min-height: 150px;
+		margin: 1em 0em;
+		width: 98.3% !important;
+		resize: none;
+	}
+	.contact_left_grid {
+		padding-left: 0;
+	}
+	.contact_grid_right input[type="submit"], .contact_grid_right input[type="reset"] {
+		outline: none;
+		padding: 15px 0;
+		font-size: 14px;
+		width: 48.7%;
+		border: none;
+		letter-spacing: 2px;
+		margin-left: 0em;
+	}
+	.contact-left {
+		margin-top: 2em;
+	}
+}
+@media(max-width:667px) {
+   .contact_left_grid {
+        padding-left: 0;
+        padding: 0;
+    }
+    .contact_grid_right input[type="email"] {
+        margin: 1em 0 1em 0;
+    }
+    .contact_grid_right textarea {
+        min-height: 150px;
+        margin: 1em 0em;
+        width: 100% !important;
+        resize: none;
+    }
+    .contact_grid_right input[type="submit"], .contact_grid_right input[type="reset"] {
+        outline: none;
+        padding: 15px 0;
+        font-size: 14px;
+        width: 49.3%;
+        border: none;
+        letter-spacing: 2px;
+        margin-left: 0em;
+    }
+}
+@media(max-width:568px) {
+    .contact_grid_right input[type="submit"], .contact_grid_right input[type="reset"] {
+        outline: none;
+        padding: 15px 0;
+        font-size: 14px;
+        width: 48.98%;
+        border: none;
+        letter-spacing: 2px;
+        margin-left: 0em;
+    }
+}
+@media(max-width:384px) {}
+
+@media(max-width:375px) {
+    .contact_grid_right input[type="submit"], .contact_grid_right input[type="reset"] {
+        outline: none;
+        padding: 15px 0;
+        font-size: 14px;
+        width: 47.98%;
+        border: none;
+        letter-spacing: 2px;
+        margin-left: 0em;
+    }
+    .contact-left span.fa {
+        width: 38px;
+        height: 38px;
+        background: none;
+        text-align: center;
+        font-size: 1em;
+        line-height: 2.1em
+    }
+}
+
+@media(max-width:320px) {}
+
+
+/*--//responsive--*/

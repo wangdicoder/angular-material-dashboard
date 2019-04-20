@@ -1,0 +1,81 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add --dev \
+
+PATH: 
+  C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Apache\bin;C:\Program Files (x86)\MySQL\MySQL Utilities 1.6\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Users\CaoTin\AppData\Local\Programs\Python\Python37\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\nodejs\;C:\Program Files\Heroku\bin;C:\Users\CaoTin\AppData\Roaming\npm;C:\Users\CaoTin\AppData\Local\Programs\Python\Python37\Scripts\;C:\Program Files\PuTTY\;D:\cmder\bin;C:\Program Files\Microsoft VS Code\bin;C:\Program Files;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\ManagementStudio\;C:\Program Files (x86)\Microsoft SQL Server\120\DTS\Binn\;G:\program\Git\cmd;C:\Program Files (x86)\Yarn\bin\;C:\composer;C:\Users\CaoTin\Desktop\timo\timo.autofill.test\server;C:\php;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;G:\program\Git\cmd;C:\Program Files\Apache\bin;C:\Program Files (x86)\MySQL\MySQL Utilities 1.6\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\ManagementStudio\;C:\Program Files (x86)\Microsoft SQL Server\120\DTS\Binn\;C:\WINDOWS\system32\config\systemprofile\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\110\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\;C:\Users\CaoTin\AppData\Local\Programs\Python\Python37\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\no;C:\Users\CaoTin\AppData\Local\Programs\Python\Python37\Scripts\;C:\Program Files\Microsoft VS Code\bin;C:\Users\CaoTin\AppData\Roaming\npm;C:\Users\CaoTin\Desktop\bin;C:\Users\CaoTin\AppData\Local\Microsoft\WindowsApps;C:\Users\CaoTin\AppData\Local\Yarn\bin;C:\Users\CaoTin\AppData\Roaming\Composer\vendor\bin;C:\Program Files\MongoDB\Server\4.0\bin;C:\Users\CaoTin\Desktop\timo\timo.autofill.test\server\;
+
+Yarn version: 
+  1.13.0
+
+Node version: 
+  8.11.2
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: EBUSY: resource busy or locked, lstat 'D:\pagefile.sys'
+
+npm manifest: 
+  {
+    "name": "angular2-material-dashboard-pro",
+    "version": "0.0.0",
+    "license": "MIT",
+    "scripts": {
+      "ng": "ng",
+      "start": "ng serve",
+      "build": "ng build",
+      "test": "ng test",
+      "lint": "ng lint",
+      "e2e": "ng e2e"
+    },
+    "private": true,
+    "dependencies": {
+      "@angular/animations": "^7.0.4",
+      "@angular/cdk": "^7.3.7",
+      "@angular/common": "^7.0.4",
+      "@angular/compiler": "^7.0.4",
+      "@angular/core": "^7.0.4",
+      "@angular/forms": "^7.0.4",
+      "@angular/http": "^7.0.4",
+      "@angular/material": "^7.3.7",
+      "@angular/platform-browser": "^7.0.4",
+      "@angular/platform-browser-dynamic": "^7.0.4",
+      "@angular/router": "^7.0.4",
+      "aws-amplify": "^1.1.26",
+      "aws-amplify-angular": "^2.1.12",
+      "bcrypt": "^3.0.6",
+      "core-js": "^2.6.5",
+      "hammerjs": "^2.0.8",
+      "rxjs": "~6.3.3",
+      "sweetalert": "^2.1.2",
+      "zone.js": "^0.8.29"
+    },
+    "devDependencies": {
+      "@angular-devkit/build-angular": "^0.13.8",
+      "@angular/cli": "^7.3.8",
+      "@angular/compiler-cli": "^7.2.13",
+      "@angular/language-service": "^7.0.4",
+      "@types/jasmine": "^2.8.16",
+      "@types/jasminewd2": "~2.0.3",
+      "@types/node": "~8.9.4",
+      "codelyzer": "~4.5.0",
+      "jasmine-core": "~2.99.1",
+      "jasmine-spec-reporter": "~4.2.1",
+      "karma": "~3.0.0",
+      "karma-chrome-launcher": "~2.2.0",
+      "karma-coverage-istanbul-reporter": "^2.0.5",
+      "karma-jasmine": "~1.1.2",
+      "karma-jasmine-html-reporter": "^0.2.2",
+      "protractor": "^5.4.2",
+      "ts-node": "~7.0.0",
+      "tslint": "~5.11.0",
+      "typescript": "~3.1.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

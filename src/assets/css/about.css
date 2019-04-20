@@ -1,0 +1,211 @@
+body a {
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-ms-transition: 0.5s all;
+}
+/*-- mid-services --*/
+.mid_services {
+    background: #f0f1f5;
+}
+.according_inner_grids {
+	padding: 6em 4em;
+}
+.bar-grids{
+	padding: 6em 5em;
+}
+.mid_services_img {
+    background: url(../images/banner2.jpg) no-repeat 0px 0px;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    min-height: 547px;
+}
+.news-right p{
+    line-height: 1.9em;
+	color:#888;
+
+}
+p.sub_p {
+    margin: 1.2em 0;
+
+}
+.news-left img {
+    width: 100%;
+}
+.news-right h4 {
+    color: #505050;
+    font-size: 1.6em;
+    font-weight: 600;
+}
+.pa_italic i {
+	left: -1em;
+	font-size: 11px;
+}
+
+.pa_italic span {
+	display: none;
+}
+
+.collapsed span {
+	display: inline-block;
+	left: -1em;
+	font-size: 11px;
+}
+
+.collapsed i {
+	display: none;
+}
+
+.panel-heading {
+	padding: 10px 35px;
+}
+
+.panel-title {
+	font-size: 1em;
+	color: #fff;
+	text-transform: capitalize;
+	text-decoration: none;
+}
+
+.panel-default {
+	border: 1px solid #c5c5c5!important;
+	background: #fff;
+}
+
+.panel-default>.panel-heading {
+	border-color: #141415;
+	color: #fff;
+	background-color: #141415;
+}
+
+.panel-body {
+	padding: 1.5em;
+	font-size: 13px;
+	line-height: 2em;
+	color: #777;
+	letter-spacing: 1px;
+}
+
+a.pa_italic label {
+	cursor: pointer;
+	font-weight: 500;
+}
+
+a.pa_italic:focus {
+	outline: none;
+	text-decoration: none;
+}
+
+.panel-default>.panel-heading+.panel-collapse>.panel-body {
+	border-top: none;
+}
+
+.panel-heading {
+	padding: 13px 25px;
+	border-bottom: 1px solid transparent;
+	border-top-left-radius: 0px!important;
+	border-top-right-radius: 0px!important;
+	border-radius: 0!important;
+}
+
+.panel-group .panel {
+	margin-bottom: 0;
+	border-radius: 0!important;
+}
+
+h3.heading.two {
+	color: #262c38;
+	margin: 0;
+	font-size: 2em;
+	font-weight: 700;
+	letter-spacing: 1px;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.19);
+	margin-bottom: 1em;
+}
+h3.heading.two.three {
+    color: #fff;
+}
+.skill_info {
+    margin-top: 4em;
+}
+/*-- //mid-services --*/
+
+/*-- /skills --*/
+
+.bargrids-left {
+    margin-right: 40px;
+}
+.bar-grids h4 {
+    font-size: 0.9em;
+    color: #ffffff;
+    margin-bottom: 0.6em;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.bar-grids h4 span.fa {
+    margin-right: 0.8em;
+    color: #ecb731;
+}
+.progress {
+    height: 6px;
+    margin-bottom: 2.2em;
+    background-color: #dadde0;
+    -webkit-border-radius:11px;
+    -moz-border-radius:11px;
+    -o-border-radius:11px;
+    -ms-border-radius:11px;
+    border-radius:11px;
+}
+
+.prgs-last {
+    margin-bottom: 0!important;
+}
+
+.progress-bar {
+    background-color: #0c0c0c;
+}
+
+.bar-grids h6 {
+    font-size: 1em;
+    color: #ffffff;
+    margin-bottom: 0.6em;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.bar-grids h6 span {
+    float: right;
+    font-size: 1em;
+}
+
+.progress-striped .progress-bar,
+.progress-bar-striped {
+    background-image: none!important;
+}
+
+
+
+/*-- //skills --*/
+/*-- /Responsive --*/
+@media(max-width:1280px){
+	.according_inner_grids {
+		padding: 5.09em 4em;
+	}
+}
+@media(max-width:1080px){
+	.according_inner_grids {
+		padding: 5.07em 3em;
+	}
+}
+@media(max-width:1050px){
+	
+}
+@media(max-width:1024px){
+	
+}
+/*-- //Responsive --*/
