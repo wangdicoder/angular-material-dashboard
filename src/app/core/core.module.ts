@@ -8,6 +8,9 @@ import { ShopComponent } from './shop/shop.component';
 import { ProductComponent } from './product/product.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { ProductCartComponent } from './common/product-cart/product-cart.component';
+import { CommonSharedModule } from './common/common.module';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -16,12 +19,14 @@ import { FooterComponent } from './footer/footer.component';
     ShopComponent,
     ProductComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    SidebarComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
-    CoreRoutingModule
+    CoreRoutingModule,
+    CommonSharedModule
   ],
   exports: [
     CoreComponent,

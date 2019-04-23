@@ -20,7 +20,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/shop.css">
-  <link rel="stylesheet" href="assets/css/style7.css">
+  <link rel="stylesheet" href="assets/css/flexslider.css">
+  <link rel="stylesheet" href="assets/css/easy-responsive-tabs.css">
+  <link rel="stylesheet" href="assets/css/jquery-ui1.css">
   <script type="application/x-javascript">
 		addEventListener("load", function () {
 			setTimeout(hideURLbar, 0);
@@ -140,6 +142,28 @@
       closeBttn.addEventListener('click', toggleOverlay);
     }
   </script>
+  <!-- price range (top products) -->
+  <script src="/assets/js/jquery-ui.js"></script>
+  <script>
+    //<![CDATA[ 
+    $(window).load(function () {
+      $("#slider-range").slider({
+        range: true,
+        min: 0,
+        max: 9000,
+        values: [50, 6000],
+        slide: function (event, ui) {
+          $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+        }
+      });
+      $("#amount").val("$" + $("#slider-range").slider("values", 0) + " - $" + $("#slider-range").slider("values", 1));
+
+    }); //]]>
+  </script>
+  <!-- //price range (top products) -->
+  <script src="/assets/js/jquery.flexslider.js"></script>
+  <script src="/assets/js/easy-responsive-tabs.js"></script>
+  <script src="/assets/js/imagezoom.js"></script>
 </body>
 
 </html>

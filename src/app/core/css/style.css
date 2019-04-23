@@ -454,7 +454,7 @@ li.dropdown.act a.w3_icons_act {
 /*-- banner-top --*/
 
 .banner-top {
-    background: url(assets/images/slide-1.jpg) no-repeat 0px 0px;
+    background: url(assets/images/slide-2.jpg) no-repeat 0px 0px;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -1292,7 +1292,7 @@ p.copy-right-w3ls-agileits a:hover {
 /*-- //footer --*/
 
 .banner_top.innerpage {
-    background: url(assets/images/banner3.jpg) no-repeat 0px -221px;
+    background: url(assets/images/slide-2.jpg) no-repeat 0px -221px;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -1746,7 +1746,7 @@ button.btn1 {
         padding: 2em 1em;
     }
     .banner_top.innerpage {
-        background: url(assets/images/banner3.jpg) no-repeat 0px -21px;
+        background: url(assets/images/slide-2.jpg) no-repeat 0px -21px;
         background-size: cover;
         -webkit-background-size: cover;
         -moz-background-size: cover;

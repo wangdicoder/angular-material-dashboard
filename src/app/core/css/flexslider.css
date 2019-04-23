@@ -9,54 +9,60 @@
  * Contributing author: Tyler Smith (@mbmufffin)
  * 
  */
+
 /* ====================================================================================================================
  * FONT-FACE
  * ====================================================================================================================*/
+
 @font-face {
   font-family: 'flexslider-icon';
-  src: url('../fonts/webfont/flexslider-icon.eot');
-  src: url('../fonts/webfonts/flexslider-icon.eot?#iefix') format('embedded-opentype'), url('../fonts/webfonts/flexslider-icon.woff') format('woff'), url('../fonts/webfonts/flexslider-icon.ttf') format('truetype'), url('../fonts/webfonts/flexslider-icon.svg#flexslider-icon') format('svg');
+  src: url('/assets/fonts/webfont/flexslider-icon.eot');
+  src: url('/assets/fonts/webfonts/flexslider-icon.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/webfonts/flexslider-icon.woff') format('woff'), url('/assets/fonts/webfonts/flexslider-icon.ttf') format('truetype'), url('/assets/fonts/webfonts/flexslider-icon.svg#flexslider-icon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
+
 /* ====================================================================================================================
  * RESETS
  * ====================================================================================================================*/
-.flex-container a:hover,
-.flex-slider a:hover,
-.flex-container a:focus,
-.flex-slider a:focus {
+
+.flex-container a:hover, .flex-slider a:hover, .flex-container a:focus, .flex-slider a:focus {
   outline: none;
 }
-.slides,
-.slides > li,
-.flex-control-nav,
-.flex-direction-nav {
+
+.slides, .slides>li, .flex-control-nav, .flex-direction-nav {
   margin: 0;
   padding: 0;
   list-style: none;
 }
+
 .flex-direction-nav {
-display:none;
+  display: none;
 }
+
 .flex-pauseplay span {
   text-transform: capitalize;
 }
+
 /* ====================================================================================================================
  * BASE STYLES
  * ====================================================================================================================*/
+
 .flexslider {
   margin: 0;
   padding: 0;
 }
-.flexslider .slides > li {
+
+.flexslider .slides>li {
   display: none;
   -webkit-backface-visibility: hidden;
 }
+
 .flexslider .slides img {
   width: 100%;
   display: block;
 }
+
 .flexslider .slides:after {
   content: "\0020";
   display: block;
@@ -65,18 +71,23 @@ display:none;
   line-height: 0;
   height: 0;
 }
+
 html[xmlns] .flexslider .slides {
   display: block;
 }
+
 * html .flexslider .slides {
   height: 1%;
 }
-.no-js .flexslider .slides > li:first-child {
+
+.no-js .flexslider .slides>li:first-child {
   display: block;
 }
+
 /* ====================================================================================================================
  * DEFAULT THEME
  * ====================================================================================================================*/
+
 .flexslider {
   margin: 0 0 10px;
   background: #ffffff;
@@ -91,12 +102,15 @@ html[xmlns] .flexslider .slides {
   -o-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
   box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
 }
+
 .flexslider .slides {
   zoom: 1;
 }
+
 .flexslider .slides img {
   height: auto;
 }
+
 .flex-viewport {
   max-height: 450px;
   -webkit-transition: all 1s ease;
@@ -105,15 +119,16 @@ html[xmlns] .flexslider .slides {
   -o-transition: all 1s ease;
   transition: all 1s ease;
   border: 1px solid #D1CFCF;
-
 }
 
 .loading .flex-viewport {
   max-height: 300px;
 }
+
 .carousel li {
   margin-right: 5px;
 }
+
 .flex-direction-nav {
   *height: 0;
 }
@@ -123,6 +138,7 @@ html[xmlns] .flexslider .slides {
   filter: alpha(opacity=0);
   cursor: default;
 }
+
 .flex-pauseplay a {
   display: block;
   width: 20px;
@@ -136,30 +152,36 @@ html[xmlns] .flexslider .slides {
   cursor: pointer;
   color: #000;
 }
+
 .flex-pauseplay a:before {
   font-family: "flexslider-icon";
   font-size: 20px;
   display: inline-block;
   content: '\f004';
 }
+
 .flex-pauseplay a:hover {
   opacity: 1;
 }
+
 .flex-pauseplay a .flex-play:before {
   content: '\f003';
 }
+
 .flex-control-nav {
   width: 100%;
   position: absolute;
   bottom: -40px;
   text-align: center;
 }
+
 .flex-control-nav li {
   margin: 0 6px;
   display: inline-block;
   zoom: 1;
   *display: inline;
 }
+
 .flex-control-paging li a {
   width: 11px;
   height: 11px;
@@ -176,28 +198,34 @@ html[xmlns] .flexslider .slides {
   -moz-border-radius: 20px;
   border-radius: 20px;
 }
+
 .flex-control-paging li a:hover {
   background: #333;
   background: rgba(0, 0, 0, 0.7);
 }
+
 .flex-control-paging li a.flex-active {
   background: #000;
   background: rgba(0, 0, 0, 0.9);
   cursor: default;
 }
+
 .flex-control-thumbs {
   margin: 5px 0 0;
   position: static;
   overflow: hidden;
 }
+
 .flex-control-thumbs li {
   width: 32.2%;
   float: left;
   margin: 0 1% 0 0;
 }
-.flex-control-thumbs li:nth-child(4){
-	margin:0;
+
+.flex-control-thumbs li:nth-child(4) {
+  margin: 0;
 }
+
 .flex-control-thumbs img {
   width: 100%;
   height: auto;
@@ -209,18 +237,22 @@ html[xmlns] .flexslider .slides {
   -ms-transition: all 1s ease;
   -o-transition: all 1s ease;
   transition: all 1s ease;
-    border: 1px solid #D1CFCF;
+  border: 1px solid #D1CFCF;
 }
+
 .flex-control-thumbs img:hover {
   opacity: 1;
 }
+
 .flex-control-thumbs .flex-active {
   opacity: 1;
   cursor: default;
 }
+
 /* ====================================================================================================================
  * RESPONSIVE
  * ====================================================================================================================*/
+
 @media screen and (max-width: 860px) {
   .flex-direction-nav .flex-prev {
     opacity: 1;
