@@ -11,8 +11,8 @@ export class ProfileComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.firstName = 'Alec';
-    this.lastName = 'Thompson';
+    this.firstName = 'Cao';
+    this.lastName = 'Tin';
   }
 
 }

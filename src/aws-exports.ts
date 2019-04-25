@@ -11,7 +11,7 @@ const awsmobile = {
     'aws_bots': 'enable',
     'aws_bots_config': [],
     'aws_cloud_logic': 'enable',
-    'aws_cloud_logic_custom': [{ "id": "inxcmm3bld", "name": "pizza", "description": "", "endpoint": "https://inxcmm3bld.execute-api.us-east-1.amazonaws.com/Development", "region": "us-east-1", "paths": ["/api/pizza", "/api/pizza/123"] }],
+    'aws_cloud_logic_custom': [{ "id": "324vefaw5g", "name": "pizza", "description": "", "endpoint": "https://324vefaw5g.execute-api.us-east-1.amazonaws.com", "region": "us-east-1", "paths": ["/api/pizza", "/api/pizza/123"] }],
     'aws_cognito_identity_pool_id': 'us-east-1:fc4f0887-eb58-44ba-b69d-7640be341f24',
     'aws_cognito_region': 'us-east-1',
     'aws_content_delivery': 'enable',

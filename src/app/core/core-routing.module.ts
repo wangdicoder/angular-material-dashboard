@@ -4,10 +4,12 @@ import { CoreComponent } from './core.component';
 import { HomeComponent } from './home/home.component';
 import { ShopComponent } from './shop/shop.component';
 import { ProductComponent } from './product/product.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 const routes: Routes = [
     {
         path: '', component: CoreComponent, children: [
             { path: '', component: HomeComponent },
+            { path: 'checkout', component: CheckoutComponent },
             { path: 'shop', component: ShopComponent },
             { path: 'product/:id', component: ProductComponent }
         ]

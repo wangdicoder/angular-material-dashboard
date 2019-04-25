@@ -6,11 +6,15 @@ declare const $: any;
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
+  url: string = window.location.pathname;
   constructor() { }
 
   ngOnInit() {
     this.loadScript();
+    console.log();
+    this.url = this.url.split('/')[1].toUpperCase();
+    console.log(this.url);
+
   }
 
   loadScript() {

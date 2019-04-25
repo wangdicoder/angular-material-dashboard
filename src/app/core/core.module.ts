@@ -11,6 +11,8 @@ import { FooterComponent } from './footer/footer.component';
 import { ProductCartComponent } from './common/product-cart/product-cart.component';
 import { CommonSharedModule } from './common/common.module';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -20,13 +22,15 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     ProductComponent,
     HeaderComponent,
     FooterComponent,
-    SidebarComponent
+    SidebarComponent,
+    CheckoutComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
+    ReactiveFormsModule,
     CoreRoutingModule,
-    CommonSharedModule
+    CommonSharedModule,
   ],
   exports: [
     CoreComponent,

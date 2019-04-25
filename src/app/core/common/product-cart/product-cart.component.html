@@ -1,5 +1,5 @@
 <!--/mens-->
-<div class="col-md-4 product-men">
+<div class="col-md-{{col}} product-men">
   <div class="product-shoe-info shoe">
     <div class="men-pro-item">
       <div class="men-thumb-item">
@@ -19,7 +19,7 @@
           <div class="grid_meta">
             <div class="product_price">
               <div class="grid-price ">
-                <span class="money ">{{product.price}}</span>
+                <span class="money ">${{product.price}}</span>
               </div>
             </div>
             <ul class="stars">
@@ -35,7 +35,7 @@
             </ul>
           </div>
           <div class="shoe single-item hvr-outline-out">
-            <form action="#" method="post">
+            <div>
               <input type="hidden" name="cmd" value="_cart">
               <input type="hidden" name="add" value="1">
               <input type="hidden" name="shoe_item" value="Bella Toes">
@@ -44,7 +44,7 @@
                   aria-hidden="true"></i></button>
 
               <a href="#" data-toggle="modal" data-target="#myModal1"></a>
-            </form>
+            </div>
 
           </div>
         </div>

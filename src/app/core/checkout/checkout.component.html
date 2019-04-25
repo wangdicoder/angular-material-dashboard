@@ -1,0 +1,114 @@
+<app-header></app-header>
+<!-- top Products -->
+<div class="ads-grid_shop">
+  <div class="shop_inner_inf">
+    <div class="privacy about">
+      <h3>Chec<span>kout</span></h3>
+
+      <div class="checkout-right">
+        <h4>Your shopping cart contains: <span>{{products.length}} Products</span></h4>
+        <table class="timetable_sub">
+          <thead>
+            <tr>
+              <th>SL No.</th>
+              <th>Product</th>
+              <th>Quality</th>
+              <th>Product Name</th>
+              <th>Price</th>
+              <th>Remove</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="rem1" *ngFor="let product of products;let i=index">
+              <td class="invert">{{i+1}}</td>
+              <td class="invert-image"><a [routerLink]="['/product',product.id]"><img [src]="product.image" alt=" "
+                    class="img-responsive"></a></td>
+              <td class="invert">
+                <div class="quantity">
+                  <div class="quantity-select">
+                    <div class="entry value-minus" (click)="onReduction(i)">&nbsp;</div>
+                    <div class="entry value"><span>{{product.quality}}</span></div>
+                    <div class="entry value-plus active" (click)="onIncrease(i)">&nbsp;</div>
+                  </div>
+                </div>
+              </td>
+              <td class="invert">{{product.name}}</td>
+              <td class="invert">${{product.price}}</td>
+              <td class="invert">
+                <div class="rem">
+                  <div class="close1"> </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="checkout-left">
+        <div class="col-md-4 checkout-left-basket">
+          <h4 routerLink="/shop" style="cursor:pointer;">Continue to basket</h4>
+          <ul>
+            <li *ngFor="let product of products">{{product.name}} <i>- {{product.quality}}</i>
+              <span>${{product.price*product.quality}} </span></li>
+            <li>Total Service Charges <i>- </i> <span>$0</span></li>
+            <li>Total <i>-</i> <span>${{onGetTotal()}}</span></li>
+          </ul>
+        </div>
+        <div class="col-md-8 address_form">
+          <h4>Add a new Details</h4>
+          <form [formGroup]="checkoutForm" class="creditly-card-form agileinfo_form">
+            <section class="creditly-wrapper wrapper">
+              <div class="information-wrapper">
+                <div class="first-row form-group">
+                  <div class="controls">
+                    <label class="control-label">Full name: </label>
+                    <input formControlName="fullname" class="billing-address-name form-control" type="text" name="name"
+                      placeholder="Full name">
+                  </div>
+                  <div class="card_number_grids">
+                    <div class="card_number_grid_left">
+                      <div class="controls">
+                        <label class="control-label">Mobile number:</label>
+                        <input formControlName="phoneNumber" class="form-control" type="text"
+                          placeholder="Mobile number">
+                      </div>
+                    </div>
+                    <div class="card_number_grid_right">
+                      <div class="controls">
+                        <label class="control-label">Landmark: </label>
+                        <input formControlName="landmark" class="form-control" type="text" placeholder="Landmark">
+                      </div>
+                    </div>
+                    <div class="clear"> </div>
+                  </div>
+                  <div class="controls">
+                    <label class="control-label">Town/City: </label>
+                    <input formControlName="town" class="form-control" type="text" placeholder="Town/City">
+                  </div>
+                  <div class="controls">
+                    <label class="control-label">Address type: </label>
+                    <select formControlName="address" [compareWith]="compare" class="form-control option-w3ls">
+                      <option value="office">Office</option>
+                      <option value="home">Home</option>
+                      <option value="Commercial">Commercial</option>
+                    </select>
+                  </div>
+                </div>
+                <button type="submit" class="submit check_out">Delivery to this Address</button>
+              </div>
+            </section>
+          </form>
+          <div class="checkout-right-basket">
+            <a routerLink="/payment">Make a Payment </a>
+          </div>
+        </div>
+
+        <div class="clearfix"> </div>
+
+
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- //top products -->
+<app-footer></app-footer>

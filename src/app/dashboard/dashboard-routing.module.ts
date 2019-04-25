@@ -16,13 +16,13 @@ const routes: Routes = [
     path: '', component: RootComponent, children: [
       { path: '', component: HomeComponent },
       { path: 'profile', component: ProfileComponent },
-      { path: 'table', component: TableComponent },
+      { path: 'product', component: TableComponent },
       { path: 'notification', component: NotificationComponent },
-      { path: 'alert', component: SweetAlertComponent },
+      // { path: 'alert', component: SweetAlertComponent },
       { path: 'settings', component: SettingsComponent },
-      { path: 'components/price-table', component: PriceTableComponent },
-      { path: 'components/panels', component: PanelsComponent },
-      { path: 'components/wizard', component: WizardComponent }
+      // { path: 'components/price-table', component: PriceTableComponent },
+      // { path: 'components/panels', component: PanelsComponent },
+      // { path: 'components/wizard', component: WizardComponent }
     ]
   }
 ];

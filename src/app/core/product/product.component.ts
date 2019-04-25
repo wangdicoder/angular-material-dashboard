@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 declare const $: any;
 @Component({
@@ -8,22 +9,49 @@ declare const $: any;
 })
 export class ProductComponent implements OnInit {
 
-  constructor() { }
+  product = {
+    name: "Shoe Rock Vision(SRV) Sneakers (Blue)",
+    price: "123",
+    discount: "30",
+    description: `
+    LOREM IPSUM DOLOR SIT AMET
+Lorem ipsum dolor sit amet, consectetur adipisicing elPellentesque vehicula augue eget nisl ullamcorper, molestie blandit ipsum auctor. Mauris volutpat augue dolor.Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut lab ore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. labore et dolore magna aliqua.
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elPellentesque vehicula augue eget nisl ullamcorper, molestie blandit ipsum auctor. Mauris volutpat augue dolor.Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut lab ore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. labore et dolore magna aliqua.`,
+    comments: [{
+      userId: "212321",
+      fullname: "admin",
+      image: "/assets/images/avatar.png",
+      content: "Lorem ipsum dolor sit amet, consectetur adipisicing elPellentesque vehicula augue eget.Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit."
+    }],
+    images: [
+      "/assets/images/3.jpeg",
+    ]
+  }
+
+  myForm: FormGroup;
+
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
-    this.initSlider()
+    this.initSlider();
+    this.myForm = this.fb.group({
+      fullname: ['', [Validators.required]],
+      email: ['', [Validators.required]],
+      content: ['', [Validators.required]]
+    })
+    setTimeout(callback => {
+      // Can also be used with $(document).ready()
+      $(document).ready(function () {
+        $('.flexslider').flexslider({
+          animation: "slide",
+          controlNav: "thumbnails"
+        });
+      });
+    }, 100)
   }
 
   initSlider() {
-
-    // Can also be used with $(document).ready()
-    $(window).load(function () {
-      $('.flexslider').flexslider({
-        animation: "slide",
-        controlNav: "thumbnails"
-      });
-    });
-
     $(document).ready(function () {
       $('#horizontalTab').easyResponsiveTabs({
         type: 'default', //Types: default, vertical, accordion           
@@ -44,6 +72,6 @@ export class ProductComponent implements OnInit {
         fit: true
       });
     });
-
   }
+
 }

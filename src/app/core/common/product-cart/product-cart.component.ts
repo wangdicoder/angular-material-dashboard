@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ProductCartComponent implements OnInit {
   @Input() product;
-
+  @Input() col = 3;
   constructor() { }
 
   ngOnInit() {

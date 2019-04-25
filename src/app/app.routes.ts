@@ -14,5 +14,5 @@ const routes: Routes = [
   { path: '', loadChildren: "./core/core.module#CoreModule" },
 ];
 
-export const routing = RouterModule.forRoot(routes);
+export const routing = RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled' });
 

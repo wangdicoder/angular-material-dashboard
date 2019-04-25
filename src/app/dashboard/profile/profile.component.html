@@ -14,12 +14,7 @@
             <div class="row">
               <div class="col-md-6">
                 <mat-form-field color="accent">
-                  <input matInput type="text" placeholder="First Name" [(ngModel)]="firstName" value="Ci" name="firstName">
-                </mat-form-field>
-              </div>
-              <div class="col-md-6">
-                <mat-form-field color="accent">
-                  <input matInput type="text" placeholder="Last Name" [(ngModel)]="lastName" value="Clia" name="lastName">
+                  <input matInput type="text" placeholder="Fullname" [(ngModel)]="fullname" value="Ci" name="fullname">
                 </mat-form-field>
               </div>
             </div>
@@ -36,22 +31,13 @@
                   <input matInput type="text" placeholder="City">
                 </mat-form-field>
               </div>
-              <div class="col-md-4">
-                <mat-form-field color="accent">
-                  <input matInput type="text" placeholder="Country">
-                </mat-form-field>
-              </div>
-              <div class="col-md-4">
-                <mat-form-field color="accent">
-                  <input matInput type="text" placeholder="Postcode">
-                </mat-form-field>
-              </div>
             </div>
             <div class="row">
               <div class="col-md-12">
                 <label class="textarea-label">About Me</label>
                 <mat-form-field color="accent">
-                  <textarea matInput placeholder="Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo."></textarea>
+                  <textarea matInput rows="3"
+                    placeholder="Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo."></textarea>
                 </mat-form-field>
               </div>
             </div>
@@ -65,7 +51,7 @@
     <div class="col-md-4">
       <div class="card right-profile">
         <div class="profile">
-          <img src="../../../assets/img/marc.jpg" alt="profile"/>
+          <img src="../../../assets/img/marc.jpg" alt="profile" />
         </div>
         <h6>CEO / CO-FOUNDER</h6>
         <h4>{{ firstName }} {{ lastName }}</h4>
