@@ -19,7 +19,8 @@
           <div class="grid_meta">
             <div class="product_price">
               <div class="grid-price ">
-                <span class="money ">${{product.price}}</span>
+                <span class="money ">${{product?.prices[0]?.price*(100-product.discount)/100}}</span>
+                <del *ngIf="product.discount>0">${{product?.prices[0]?.price}}</del>
               </div>
             </div>
             <ul class="stars">
@@ -35,16 +36,8 @@
             </ul>
           </div>
           <div class="shoe single-item hvr-outline-out">
-            <div>
-              <input type="hidden" name="cmd" value="_cart">
-              <input type="hidden" name="add" value="1">
-              <input type="hidden" name="shoe_item" value="Bella Toes">
-              <input type="hidden" name="amount" value="675.00">
-              <button type="submit" class="shoe-cart pshoe-cart"><i class="fa fa-cart-plus"
-                  aria-hidden="true"></i></button>
-
-              <a href="#" data-toggle="modal" data-target="#myModal1"></a>
-            </div>
+            <button type="submit" class="shoe-cart pshoe-cart" (click)="addToCart()"><i class="fa fa-cart-plus"
+                aria-hidden="true"></i></button>
 
           </div>
         </div>

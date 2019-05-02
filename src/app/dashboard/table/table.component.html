@@ -1,5 +1,5 @@
 <div class="container">
-  <app-navbar title="Table List"></app-navbar>
+  <app-navbar title="Product"></app-navbar>
   <div class="row">
     <div class="col-md-12">
       <div class="card">
@@ -8,6 +8,9 @@
         </div>
         <div class="card-content">
           <h4 class="card-title">Product</h4>
+          <br>
+          <a mat-raised-button color="primary" routerLink="create">Create Product</a>
+          <mat-progress-bar *ngIf="isLoading" mode="indeterminate"></mat-progress-bar>
           <div class="table-responsive">
             <table class="table">
               <thead class="text-primary">
@@ -20,54 +23,15 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>Dakota Rice</td>
-                  <td class="text-primary">$36,738</td>
-                  <td>30%</td>
-                  <td>Oud-Turnhout</td>
+                <tr *ngFor="let item of products">
+                  <td>{{item.name}}</td>
+                  <td class="text-primary">{{item.prices[0].price}}</td>
+                  <td>{{item.discount}}%</td>
+                  <td>{{item.category}}</td>
                   <td>
-                    <button mat-raised-button color="primary">Edit</button>
-                    <button mat-raised-button color="accent">Delete</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Dakota Rice</td>
-                  <td class="text-primary">$36,738</td>
-                  <td>30%</td>
-                  <td>Oud-Turnhout</td>
-                  <td>
-                    <button mat-raised-button color="primary">Edit</button>
-                    <button mat-raised-button color="accent">Delete</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Dakota Rice</td>
-                  <td class="text-primary">$36,738</td>
-                  <td>30%</td>
-                  <td>Oud-Turnhout</td>
-                  <td>
-                    <button mat-raised-button color="primary">Edit</button>
-                    <button mat-raised-button color="accent">Delete</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Dakota Rice</td>
-                  <td class="text-primary">$36,738</td>
-                  <td>30%</td>
-                  <td>Oud-Turnhout</td>
-                  <td>
-                    <button mat-raised-button color="primary">Edit</button>
-                    <button mat-raised-button color="accent">Delete</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Dakota Rice</td>
-                  <td class="text-primary">$36,738</td>
-                  <td>30%</td>
-                  <td>Oud-Turnhout</td>
-                  <td>
-                    <button mat-raised-button color="primary">Edit</button>
-                    <button mat-raised-button color="accent">Delete</button>
+                    <button mat-raised-button color="primary" [routerLink]="[item.id]
+                    ">Edit</button>
+                    <button mat-raised-button color="accent" (click)="onDelete(item.id)">Delete</button>
                   </td>
                 </tr>
               </tbody>

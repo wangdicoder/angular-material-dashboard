@@ -1,0 +1,112 @@
+<div class="container">
+  <app-navbar title="Create Product"></app-navbar>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <!-- <div class="card-header">
+          <i class="material-icons">create</i>
+        </div> -->
+        <div class="card-content">
+          <mat-progress-bar *ngIf="isLoading" mode="indeterminate"></mat-progress-bar>
+          <form [formGroup]="productForm" class="product-form" (ngSubmit)="productForm.valid&&onSave()">
+            <mat-form-field class="form-full-width">
+              <input type="text" formControlName="name" matInput placeholder="Name of product">
+            </mat-form-field>
+            <div class="form-full-width">
+              <angular-editor type="text" formControlName="description" placeholder="Description"
+                [config]="editorConfig">
+              </angular-editor>
+            </div>
+            <mat-form-field class="form-full-width">
+              <input type="number" formControlName="discount" matInput placeholder="Discount of product" min="0">
+            </mat-form-field>
+            <div class="form-full-width">
+              <mat-form-field *ngFor="let item of prices">
+                <input type="number" matInput placeholder="{{item.size}}" [name]="item.size" [value]="item.price"
+                  (change)="onChange($event)">
+              </mat-form-field>
+            </div>
+            <mat-form-field class="form-full-width">
+              <mat-label>Category: </mat-label>
+              <mat-select formControlName="category">
+                <mat-option value="appetizer">Appetizer</mat-option>
+                <mat-option value="pizza">Pizza</mat-option>
+                <mat-option value="drinks">Drinks</mat-option>
+                <mat-option value="pasta">Pasta & Rice</mat-option>
+              </mat-select>
+            </mat-form-field>
+            <input width="200px" height="200px" type="file" class="form-full-width" (change)="onFileSelected($event)">
+            <img *ngIf="imageView" [src]="imageView" accept="image/*">
+            <br>
+            <button mat-raised-button color="primary" type="submit">Save</button>
+          </form>
+          <br>
+          <h4>Comment</h4>
+          <table class="table">
+            <thead class="text-primary">
+              <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Discount</th>
+                <th>Category</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Dakota Rice</td>
+                <td class="text-primary">$36,738</td>
+                <td>30%</td>
+                <td>Oud-Turnhout</td>
+                <td>
+                  <button mat-raised-button color="primary">Edit</button>
+                  <button mat-raised-button color="accent">Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>Dakota Rice</td>
+                <td class="text-primary">$36,738</td>
+                <td>30%</td>
+                <td>Oud-Turnhout</td>
+                <td>
+                  <button mat-raised-button color="primary">Edit</button>
+                  <button mat-raised-button color="accent">Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>Dakota Rice</td>
+                <td class="text-primary">$36,738</td>
+                <td>30%</td>
+                <td>Oud-Turnhout</td>
+                <td>
+                  <button mat-raised-button color="primary">Edit</button>
+                  <button mat-raised-button color="accent">Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>Dakota Rice</td>
+                <td class="text-primary">$36,738</td>
+                <td>30%</td>
+                <td>Oud-Turnhout</td>
+                <td>
+                  <button mat-raised-button color="primary">Edit</button>
+                  <button mat-raised-button color="accent">Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>Dakota Rice</td>
+                <td class="text-primary">$36,738</td>
+                <td>30%</td>
+                <td>Oud-Turnhout</td>
+                <td>
+                  <button mat-raised-button color="primary">Edit</button>
+                  <button mat-raised-button color="accent">Delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

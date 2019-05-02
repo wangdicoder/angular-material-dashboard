@@ -31,6 +31,9 @@ export class AuthService {
       },
       validationData: []
     })
+  }
 
+  currentUserInfo() {
+    return Auth.currentUserInfo()
   }
 }

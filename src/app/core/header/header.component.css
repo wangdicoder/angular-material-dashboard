@@ -141,3 +141,137 @@
     background: #e9944f;
     color: #fff;
 }
+
+.badge {
+    background-color: #6394F8;
+    border-radius: 10px;
+    color: white;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 1;
+    padding: 3px 7px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.shopping-cart {
+    margin: 20px 0;
+    float: right;
+    background: white;
+    width: 320px;
+    position: relative;
+    border-radius: 3px;
+    padding: 20px;
+    display: none;
+}
+
+.shopping-cart .shopping-cart-header {
+    border-bottom: 1px solid #E8E8E8;
+    padding-bottom: 15px;
+}
+
+.shopping-cart .shopping-cart-header .shopping-cart-total {
+    float: right;
+}
+
+.shopping-cart .shopping-cart-items {
+    padding-top: 20px;
+}
+
+.shopping-cart .shopping-cart-items li {
+    margin-bottom: 18px;
+}
+
+.shopping-cart .shopping-cart-items img {
+    float: left;
+    margin-right: 12px;
+}
+
+.shopping-cart .shopping-cart-items .item-name {
+    display: block;
+    padding-top: 10px;
+    font-size: 16px;
+}
+
+.shopping-cart .shopping-cart-items .item-price {
+    color: #6394F8;
+    margin-right: 8px;
+}
+
+.shopping-cart .shopping-cart-items .item-quantity {
+    color: #ABB0BE;
+}
+
+.shopping-cart li {
+    text-decoration: none;
+}
+
+.shopping-cart:after {
+    bottom: 100%;
+    left: 89%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-bottom-color: white;
+    border-width: 8px;
+    margin-left: -8px;
+}
+
+.cart-icon {
+    color: #515783;
+    font-size: 24px;
+    margin-right: 7px;
+    float: left;
+}
+
+.button {
+    background: #6394F8;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    display: block;
+    border-radius: 3px;
+    font-size: 16px;
+    margin: 25px 0 15px 0;
+}
+
+.button:hover {
+    background: #729ef9;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.top_nav_right {
+    display: inline;
+    padding-left: 20px;
+}
+
+.top_nav_right a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.top_nav_right a:hover {
+    color: black;
+}
+
+.mobile-cart-button {
+    position: fixed;
+    margin: 90px 0 0 0;
+    right: 8%;
+    top: 0;
+    z-index: 9999;
+    cursor: pointer;
+    width: 36px;
+    height: 36px;
+    background: rgba(27, 25, 25, 0.27);
+}

@@ -5,5 +5,6 @@
 
 export const environment = {
   production: false,
-  url: 'https://324vefaw5g.execute-api.us-east-1.amazonaws.com/Development'
+  url: 'https://mu0gs6ozyc.execute-api.us-east-1.amazonaws.com/Development',
+  s3: 'https://s3.amazonaws.com/pizza-userfiles-mobilehub-655136699/public/'
 };

@@ -5,10 +5,9 @@
     <div class="col-md-4 single-right-left ">
       <div class="grid images_3_of_2">
         <div class="flexslider">
-
           <ul class="slides">
-            <li *ngFor="let image of product?.images" attr.data-thumb="{{image}}">
-              <div class="thumb-image"> <img [src]="image" data-imagezoom="true" class="img-responsive">
+            <li attr.data-thumb="{{product?.image}}">
+              <div class="thumb-image"> <img [src]="product?.image" data-imagezoom="true" class="img-responsive">
               </div>
             </li>
           </ul>
@@ -19,18 +18,10 @@
     <div class="col-md-8 single-right-left simpleCart_shelfItem">
       <h3>{{product?.name}}</h3>
       <p>
-        <span class="item_price">${{(product?.price*(100-product?.discount))/100}}</span>
-        <del *ngIf="product?.discount!=0">${{product?.price}}</del>
+        <span class="item_price">${{(product?.prices[size]?.price*(100-product?.discount))/100}}</span>
+        <del *ngIf="product?.discount>0">${{product?.price}}</del>
       </p>
-      <div class="rating1">
-        <ul class="stars">
-          <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-          <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-          <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i></a></li>
-          <li><a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
-          <li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-        </ul>
-      </div>
+      <app-star vote="3.5"></app-star>
       <!-- <div class="description">
         <h5>Discount :</h5>
         <div>
@@ -49,14 +40,9 @@
       </div>
       <div class="occasional">
         <h5>Size :</h5>
-        <div class="colr ert">
-          <label class="radio"><input type="radio" name="radio" checked><i></i>Small</label>
-        </div>
-        <div class="colr">
-          <label class="radio"><input type="radio" name="radio"><i></i>Medium </label>
-        </div>
-        <div class="colr">
-          <label class="radio"><input type="radio" name="radio"><i></i>Large</label>
+        <div class="colr" *ngFor="let item of product?.prices;let i=index;">
+          <label class="radio"><input type="radio" name="radio" (change)="changeSize(i)"
+              checked><i></i>{{item.size}}</label>
         </div>
         <div class="clearfix"> </div>
       </div>
@@ -131,22 +117,22 @@
               <div class="bootstrap-tab-text-grids">
                 <div class="bootstrap-tab-text-grid" *ngFor="let item of product?.comments">
                   <div class="bootstrap-tab-text-grid-left">
-                    <img [src]="item.image" alt=" " class="img-responsive">
+                    <img [src]="'/assets/images/avatar.png'" alt=" " class="img-responsive">
                   </div>
                   <div class="bootstrap-tab-text-grid-right">
                     <ul>
-                      <li><a>{{item.fullname}}</a></li>
+                      <li><a>{{item?.fullname}}</a></li>
                       <!-- <li><a><i class="fa fa-reply-all" aria-hidden="true"></i>
                           Reply</a></li> -->
                     </ul>
-                    <p>{{item.content}}</p>
+                    <p>{{item?.content}}</p>
                   </div>
                   <div class="clearfix"> </div>
                 </div>
 
                 <div class="add-review">
                   <h4>add a review</h4>
-                  <form [formGroup]="myForm">
+                  <form [formGroup]="myForm" (ngSubmit)="myForm.valid && onComment()">
                     <input type="text" formControlName="fullname" placeholder="Fullname" name="name" required>
                     <input type="email" formControlName="email" placeholder="Email" name="email" required>
                     <textarea name="content" formControlName="content" placeholder="Message" required></textarea>
@@ -157,11 +143,6 @@
 
             </div>
           </div>
-          <!-- <div class="tab3">
-            <div class="single_page">
-              
-            </div>
-          </div> -->
         </div>
       </div>
     </div>

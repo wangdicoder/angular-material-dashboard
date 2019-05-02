@@ -13,6 +13,7 @@ import { CommonSharedModule } from './common/common.module';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { CheckoutService } from 'app/services/checkout.service';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,9 @@ import { CheckoutComponent } from './checkout/checkout.component';
     ProductComponent,
     HeaderComponent,
     FooterComponent
+  ],
+  providers: [
+    CheckoutService
   ]
 })
 export class CoreModule { }

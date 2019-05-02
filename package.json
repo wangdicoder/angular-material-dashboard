@@ -23,14 +23,18 @@
     "@angular/platform-browser": "^7.0.4",
     "@angular/platform-browser-dynamic": "^7.0.4",
     "@angular/router": "^7.0.4",
+    "@kolkov/angular-editor": "^0.13.1",
     "aws-amplify": "^1.1.26",
     "aws-amplify-angular": "^2.1.12",
     "axios": "^0.18.0",
     "bcrypt": "^3.0.6",
     "core-js": "^2.6.5",
+    "device-uuid": "^1.0.4",
     "hammerjs": "^2.0.8",
     "rxjs": "~6.3.3",
     "sweetalert": "^2.1.2",
+    "topbar": "^0.1.3",
+    "uuid": "^3.3.2",
     "zone.js": "^0.8.29"
   },
   "devDependencies": {

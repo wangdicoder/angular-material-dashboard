@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CheckoutService } from 'app/services/checkout.service';
 declare const $: any;
 @Component({
   selector: 'app-header',
@@ -7,14 +8,16 @@ declare const $: any;
 })
 export class HeaderComponent implements OnInit {
   url: string = window.location.pathname;
-  constructor() { }
+  constructor(private checkoutService: CheckoutService) { }
 
   ngOnInit() {
     this.loadScript();
     console.log();
     this.url = this.url.split('/')[1].toUpperCase();
     console.log(this.url);
-
+    this.checkoutService.local.subscribe(data => {
+      console.log(data);
+    })
   }
 
   loadScript() {
@@ -112,4 +115,7 @@ export class HeaderComponent implements OnInit {
     }
   }
 
+  showCart() {
+    $(".shopping-cart").fadeToggle("fast");
+  }
 }

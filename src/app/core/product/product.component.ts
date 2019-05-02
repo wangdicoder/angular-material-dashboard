@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { ProductService } from 'app/services/product.service';
+import { ActivatedRoute } from '@angular/router';
+import { environment } from 'environments/environment';
+import * as uuid from 'device-uuid';
+import * as topbar from 'topbar';
 
 declare const $: any;
 @Component({
@@ -8,47 +13,65 @@ declare const $: any;
   styleUrls: ['./product.component.css', '../css/flexslider.css']
 })
 export class ProductComponent implements OnInit {
-
-  product = {
-    name: "Shoe Rock Vision(SRV) Sneakers (Blue)",
-    price: "123",
-    discount: "30",
-    description: `
-    LOREM IPSUM DOLOR SIT AMET
-Lorem ipsum dolor sit amet, consectetur adipisicing elPellentesque vehicula augue eget nisl ullamcorper, molestie blandit ipsum auctor. Mauris volutpat augue dolor.Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut lab ore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. labore et dolore magna aliqua.
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elPellentesque vehicula augue eget nisl ullamcorper, molestie blandit ipsum auctor. Mauris volutpat augue dolor.Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut lab ore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. labore et dolore magna aliqua.`,
-    comments: [{
-      userId: "212321",
-      fullname: "admin",
-      image: "/assets/images/avatar.png",
-      content: "Lorem ipsum dolor sit amet, consectetur adipisicing elPellentesque vehicula augue eget.Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit."
-    }],
-    images: [
-      "/assets/images/3.jpeg",
-    ]
-  }
-
+  avatar = ''
+  product: any;
+  size = 0;
   myForm: FormGroup;
+  isLoading: boolean = false;
 
-  constructor(private fb: FormBuilder) { }
+  constructor(
+    private fb: FormBuilder,
+    private productService: ProductService,
+    private activeRoute: ActivatedRoute
+  ) { }
 
   ngOnInit() {
+
     this.initSlider();
     this.myForm = this.fb.group({
+      userId: [new uuid.DeviceUUID().get(), []],
       fullname: ['', [Validators.required]],
       email: ['', [Validators.required]],
       content: ['', [Validators.required]]
     })
-    setTimeout(callback => {
-      // Can also be used with $(document).ready()
-      $(document).ready(function () {
-        $('.flexslider').flexslider({
-          animation: "slide",
-          controlNav: "thumbnails"
+
+    this.loadProduct();
+  }
+
+  loadProduct() {
+    topbar.show();
+    this.productService.onGetProduct(this.activeRoute.snapshot.params.id)
+      .then(res => {
+        topbar.hide()
+        if (res && res.data) {
+          this.product = res.data.Item
+          this.product.image = environment.s3 + this.product.image
+        }
+      }).then(res => {
+        topbar.hide()
+        $(document).ready(function () {
+          $('.flexslider').flexslider({
+            animation: "slide",
+            controlNav: "thumbnails"
+          });
         });
-      });
-    }, 100)
+      })
+  }
+
+  onComment() {
+    console.log(this.myForm.value);
+    topbar.show();
+    this.productService.onComment(this.activeRoute.snapshot.params.id, this.myForm.value)
+      .then(res => {
+        topbar.hide()
+        this.loadProduct();
+      }).catch(error => {
+        topbar.hide();
+      })
+  }
+
+  changeSize(index) {
+    this.size = index
   }
 
   initSlider() {

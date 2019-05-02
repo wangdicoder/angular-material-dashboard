@@ -11,11 +11,14 @@ import { SettingsComponent } from './settings/settings.component';
 import { PriceTableComponent } from './component/pricetable/pricetable.component';
 import { PanelsComponent } from './component/panels/panels.component';
 import { WizardComponent } from './component/wizard/wizard.component';
-import { MatButtonModule, MatRadioModule, MatInputModule, MatMenuModule, MatCheckboxModule } from '@angular/material';
+import { MatButtonModule, MatRadioModule, MatInputModule, MatMenuModule, MatCheckboxModule, MatSelectModule, MatOptionModule, MatProgressBarModule } from '@angular/material';
 import { RootComponent } from './root/root.component';
 import { SharedModule } from 'app/shared/shared.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SidebarComponent } from 'app/sidebar/sidebar.component';
+import { ProductItemComponent } from './product-item/product-item.component';
+import { AngularEditorModule } from '@kolkov/angular-editor';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,8 @@ import { SidebarComponent } from 'app/sidebar/sidebar.component';
     PanelsComponent,
     WizardComponent,
     RootComponent,
-    SidebarComponent
+    SidebarComponent,
+    ProductItemComponent
   ],
   imports: [
     CommonModule,
@@ -40,7 +44,12 @@ import { SidebarComponent } from 'app/sidebar/sidebar.component';
     MatMenuModule,
     MatCheckboxModule,
     SharedModule,
-    FormsModule
+    FormsModule,
+    MatSelectModule,
+    MatOptionModule,
+    MatProgressBarModule,
+    ReactiveFormsModule,
+    AngularEditorModule
   ]
 })
 export class DashboardModule { }

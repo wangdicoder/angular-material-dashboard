@@ -1,42 +1,19 @@
 <app-header></app-header>
-<!-- //banner -->
-<!-- top Products -->
 <div class="ads-grid_shop">
   <div class="shop_inner_inf">
     <app-sidebar></app-sidebar>
-    <!-- product right -->
     <div class="left-ads-display col-md-9">
       <div class="wrapper_top_shop">
-        <!-- <div class="col-md-6 shop_left">
-          <img src="assets/images/slide-1.jpg" alt="">
-          <h6>40% off</h6>
-        </div>
-        <div class="col-md-6 shop_right">
-          <img src="assets/images/slide-3.jpg" alt="">
-          <h6>50% off</h6>
-        </div> -->
         <div class="clearfix"></div>
-        <!-- product-sec1 -->
         <div class="product-sec1">
           <app-product-cart *ngFor="let item of products" [product]="item" col="4"></app-product-cart>
           <div class="clearfix"></div>
         </div>
-
-        <!-- //product-sec1 -->
-        <!-- <div class="col-md-6 shop_left shp">
-          <img src="assets/images/banner4.jpg" alt="">
-          <h6>21% off</h6>
-        </div>
-        <div class="col-md-6 shop_right shp">
-          <img src="assets/images/banner1.jpg" alt="">
-          <h6>31% off</h6>
-        </div> -->
         <div class="clearfix"></div>
       </div>
     </div>
     <div class="clearfix"></div>
   </div>
 </div>
-<!-- //top products -->
 <app-banner></app-banner>
 <app-footer></app-footer>
