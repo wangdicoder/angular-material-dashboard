@@ -33,10 +33,10 @@
                 </div>
               </td>
               <td class="invert">{{product.name}}</td>
-              <td class="invert">${{product.price}}</td>
+              <td class="invert">${{product.price.price*(100-product.discount)/100}}</td>
               <td class="invert">
                 <div class="rem">
-                  <div class="close1"> </div>
+                  <div class="close1" (click)="onDelete(i)"><i class="fa fa-trash"></i></div>
                 </div>
               </td>
             </tr>
@@ -48,14 +48,15 @@
           <h4 routerLink="/shop" style="cursor:pointer;">Continue to basket</h4>
           <ul>
             <li *ngFor="let product of products">{{product.name}} <i>- {{product.quality}}</i>
-              <span>${{product.price*product.quality}} </span></li>
+              <span>${{(product.price.price*(100-product.discount)/100)*product.quality}} </span></li>
             <li>Total Service Charges <i>- </i> <span>$0</span></li>
             <li>Total <i>-</i> <span>${{onGetTotal()}}</span></li>
           </ul>
         </div>
         <div class="col-md-8 address_form">
           <h4>Add a new Details</h4>
-          <form [formGroup]="checkoutForm" class="creditly-card-form agileinfo_form">
+          <form [formGroup]="checkoutForm" class="creditly-card-form agileinfo_form"
+            (ngSubmit)="checkoutForm.valid && onSubmitOrder()">
             <section class="creditly-wrapper wrapper">
               <div class="information-wrapper">
                 <div class="first-row form-group">
@@ -72,38 +73,25 @@
                           placeholder="Mobile number">
                       </div>
                     </div>
-                    <div class="card_number_grid_right">
-                      <div class="controls">
-                        <label class="control-label">Landmark: </label>
-                        <input formControlName="landmark" class="form-control" type="text" placeholder="Landmark">
-                      </div>
-                    </div>
                     <div class="clear"> </div>
                   </div>
                   <div class="controls">
-                    <label class="control-label">Town/City: </label>
-                    <input formControlName="town" class="form-control" type="text" placeholder="Town/City">
+                    <label class="control-label">Address: </label>
+                    <input formControlName="address" class="form-control" type="text" placeholder="Address">
                   </div>
-                  <div class="controls">
-                    <label class="control-label">Address type: </label>
-                    <select formControlName="address" [compareWith]="compare" class="form-control option-w3ls">
-                      <option value="office">Office</option>
-                      <option value="home">Home</option>
-                      <option value="Commercial">Commercial</option>
-                    </select>
-                  </div>
+                  <img [src]="map" alt="">
+                  <a class="submit check_out" style="cursor:pointer" (click)="onCurrentLocation()">Get Current
+                    Location</a>
                 </div>
-                <button type="submit" class="submit check_out">Delivery to this Address</button>
+                <button type="submit" class="submit check_out" style="background: #fb383b;">Delivery to this
+                  Address</button>
               </div>
             </section>
           </form>
-          <div class="checkout-right-basket">
+          <!-- <div class="checkout-right-basket">
             <a routerLink="/payment">Make a Payment </a>
-          </div>
+          </div> -->
         </div>
-
-        <div class="clearfix"> </div>
-
 
         <div class="clearfix"></div>
       </div>

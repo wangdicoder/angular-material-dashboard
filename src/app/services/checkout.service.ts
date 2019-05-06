@@ -16,9 +16,10 @@ export class CheckoutService {
 
   public setLocal(data: string) {
     let arr = [];
-    this.local.subscribe(item => arr = JSON.parse(item))
+    this.local.subscribe(item => {
+      if (item) arr = JSON.parse(item)
+    })
     if (arr.includes(data)) {
-      console.log("fds");
       return;
     }
     arr.push(data)
@@ -29,4 +30,5 @@ export class CheckoutService {
   public getLocal() {
     return this.local;
   }
+
 }

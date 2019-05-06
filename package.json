@@ -26,6 +26,7 @@
     "@kolkov/angular-editor": "^0.13.1",
     "aws-amplify": "^1.1.26",
     "aws-amplify-angular": "^2.1.12",
+    "aws-sdk": "^2.449.0",
     "axios": "^0.18.0",
     "bcrypt": "^3.0.6",
     "core-js": "^2.6.5",

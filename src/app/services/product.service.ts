@@ -11,6 +11,7 @@ export class ProductService {
   apiName = environment.url;
   path = '/product';
   pathComment = '/comment';
+  pathOrder = '/order';
   myInit = { // OPTIONAL
     headers: {}, // OPTIONAL
     response: true, // OPTIONAL (return the entire Axios response object instead of only response.data)
@@ -32,7 +33,7 @@ export class ProductService {
     if (currentSesion && currentSesion.getIdToken().getJwtToken()) {
       token = currentSesion.getIdToken().getJwtToken();
     }
-    return axios.post(`${this.apiName}${this.path}`, product, { headers: { Authorization: token } });
+    return axios.post(`${this.apiName}${this.path}`, product);
   }
 
   onGetProduct(id: string) {
@@ -49,5 +50,11 @@ export class ProductService {
 
   onComment(idProduct: string, comment) {
     return axios.put(`${this.apiName}${this.pathComment}/${idProduct}`, comment)
+  }
+
+  onOrder(data) {
+    console.log({ ...data, id: uuid4() });
+
+    return axios.post(`${this.apiName}${this.pathOrder}`, { ...data, id: uuid4() })
   }
 }

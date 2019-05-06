@@ -17,6 +17,10 @@ export class ProductCartComponent implements OnInit {
   }
 
   addToCart() {
-    this.checkoutService.setLocal(JSON.stringify(this.product))
+    console.log(this.product);
+
+    let item = { ...this.product, price: this.product.prices[0] }
+    delete item.prices
+    this.checkoutService.setLocal(JSON.stringify(item))
   }
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CheckoutService } from 'app/services/checkout.service';
+import { isNgTemplate } from '@angular/compiler';
 declare const $: any;
 @Component({
   selector: 'app-header',
@@ -9,15 +10,25 @@ declare const $: any;
 export class HeaderComponent implements OnInit {
   url: string = window.location.pathname;
   constructor(private checkoutService: CheckoutService) { }
-
+  data = [];
+  total = 0;
+  count = 0;
   ngOnInit() {
     this.loadScript();
-    console.log();
     this.url = this.url.split('/')[1].toUpperCase();
-    console.log(this.url);
     this.checkoutService.local.subscribe(data => {
-      console.log(data);
-    })
+      if (data) {
+        this.data = JSON.parse(data)
+        this.data = this.data.map(item => JSON.parse(item)).map(item => {
+          console.log(item);
+
+          return { ...item, priceDiscount: item.price.price * (100 - item.discount) / 100 }
+        })
+        this.count = this.data.length;
+        this.total = this.data.reduce((total, current) => total = (total + +current.price.price * (100 - current.discount) / 100), 0)
+      }
+    });
+
   }
 
   loadScript() {

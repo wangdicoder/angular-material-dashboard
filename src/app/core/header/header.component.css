@@ -275,3 +275,8 @@
     height: 36px;
     background: rgba(27, 25, 25, 0.27);
 }
+
+.shopping-cart-items li img {
+    width: 50px;
+    height: auto;
+}
