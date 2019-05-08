@@ -15,7 +15,7 @@ const routes: Routes = [
       { path: 'profile', component: ProfileComponent },
       { path: 'product', component: TableComponent },
       { path: 'product/:id', component: ProductItemComponent },
-      { path: 'notification', component: NotificationComponent },
+      { path: 'order', component: NotificationComponent },
       { path: 'settings', component: SettingsComponent }
     ]
   }

@@ -11,7 +11,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ProductCartComponent } from './common/product-cart/product-cart.component';
 import { CommonSharedModule } from './common/common.module';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { CheckoutService } from 'app/services/checkout.service';
 
@@ -32,6 +32,7 @@ import { CheckoutService } from 'app/services/checkout.service';
     ReactiveFormsModule,
     CoreRoutingModule,
     CommonSharedModule,
+    FormsModule
   ],
   exports: [
     CoreComponent,

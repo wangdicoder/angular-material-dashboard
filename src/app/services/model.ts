@@ -13,9 +13,9 @@ export interface Product {
 }
 
 export interface Comment {
-    id: string;
-    comment: string;
-    userId: string;
+    email: string;
+    content: string;
+    fullname: string;
 }
 
 export interface Price {

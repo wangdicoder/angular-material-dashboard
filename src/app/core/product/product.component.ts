@@ -5,6 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 import { environment } from 'environments/environment';
 import * as uuid from 'device-uuid';
 import * as topbar from 'topbar';
+import { CheckoutService } from 'app/services/checkout.service';
 
 declare const $: any;
 @Component({
@@ -22,7 +23,8 @@ export class ProductComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private productService: ProductService,
-    private activeRoute: ActivatedRoute
+    private activeRoute: ActivatedRoute,
+    private checkoutService: CheckoutService
   ) { }
 
   ngOnInit() {
@@ -36,6 +38,14 @@ export class ProductComponent implements OnInit {
     })
 
     this.loadProduct();
+  }
+
+  onAddToCart() {
+    let product = { ...this.product, price: this.product.prices[this.size] }
+    delete product.prices
+    delete product.comments
+
+    this.checkoutService.setLocal(JSON.stringify(product))
   }
 
   loadProduct() {

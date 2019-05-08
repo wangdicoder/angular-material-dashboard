@@ -15,6 +15,7 @@ export class ShopComponent implements OnInit {
     // { id: "4", image: 'assets/images/borjomi.jpeg', name: "Borjomi", price: "51", vote: 5 },
     // { id: "5", image: 'assets/images/drpeper.jpeg', name: "Dr Pepper", price: "29", vote: 5 },
   ]
+  productTemp = []
   constructor(private productService: ProductService) { }
 
   ngOnInit() {
@@ -29,8 +30,36 @@ export class ShopComponent implements OnInit {
           item.image = `${environment.s3}${item.image}`
           return item
         })
+        this.productTemp = this.products
       }
     })
   }
 
+  filterCategory(event) {
+    let arr = event.map(item => item.value)
+    if (!arr.length)
+      this.products = this.productTemp
+    else
+      this.products = this.products.filter(item => arr.includes(item.category))
+  }
+
+  filterDiscount(event) {
+    if (!event)
+      this.products = this.productTemp
+    else
+      this.products = this.products.filter(item => item.discount >= event)
+  }
+
+  filterName(event) {
+    console.log(event);
+
+    if (event && event.length)
+      this.products = this.products.filter(item => {
+        console.log(event, item.name);
+
+        return item.name.toLowerCase().includes(event.toLowerCase())
+      })
+    else
+      this.products = this.productTemp
+  }
 }

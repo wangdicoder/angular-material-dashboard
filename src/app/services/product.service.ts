@@ -4,6 +4,7 @@ import axios from 'axios';
 import { environment } from 'environments/environment';
 import { Product } from './model';
 import uuid4 from 'uuid/v4'
+import * as uuid from 'device-uuid';
 @Injectable({
   providedIn: 'root'
 })
@@ -12,6 +13,7 @@ export class ProductService {
   path = '/product';
   pathComment = '/comment';
   pathOrder = '/order';
+  pathUser = '/user';
   myInit = { // OPTIONAL
     headers: {}, // OPTIONAL
     response: true, // OPTIONAL (return the entire Axios response object instead of only response.data)
@@ -25,9 +27,10 @@ export class ProductService {
     return axios.get(`${this.apiName}${this.path}`)
   }
 
-  async onPostProduct(product: Product) {
-    product.id = await uuid4();
-    console.log(product);
+  async onPostProduct(product) {
+    if (!product.id) {
+      product.id = await uuid4();
+    }
     let currentSesion = await Auth.currentSession();
     let token = null;
     if (currentSesion && currentSesion.getIdToken().getJwtToken()) {
@@ -52,9 +55,15 @@ export class ProductService {
     return axios.put(`${this.apiName}${this.pathComment}/${idProduct}`, comment)
   }
 
-  onOrder(data) {
-    console.log({ ...data, id: uuid4() });
+  onGetUser(id) {
+    return axios.get(`${this.apiName}${this.pathUser}?id=${id}`)
+  }
 
-    return axios.post(`${this.apiName}${this.pathOrder}`, { ...data, id: uuid4() })
+  onOrder(data) {
+    return axios.post(`${this.apiName}${this.pathOrder}`, { ...data, id: uuid4(), userId: new uuid.DeviceUUID().get() })
+  }
+
+  onScanOrder() {
+    return axios.get(`${this.apiName}${this.pathOrder}`)
   }
 }

@@ -49,17 +49,9 @@
       <div class="occasion-cart">
         <div class="shoe single-item single_page_b">
           <div>
-            <input type="hidden" name="cmd" value="_cart">
-            <input type="hidden" name="add" value="1">
-            <input type="hidden" name="shoe_item" value="Chikku Loafers">
-            <input type="hidden" name="amount" value="405.00">
-            <input type="submit" name="submit" value="Add to cart" class="button add">
-
-            <a href="#" data-toggle="modal" data-target="#myModal1"></a>
+            <input type="submit" name="submit" value="Add to cart" class="button add" (click)="onAddToCart()">
           </div>
-
         </div>
-
       </div>
       <ul class="social-nav model-3d-0 footer-social social single_page">
         <li class="share">Share On : </li>
@@ -105,9 +97,7 @@
 
             <div class="single_page">
               <h6>{{product?.name}}</h6>
-              <p [innerHTML]="product?.description">
-
-              </p>
+              <p [innerHTML]="product?.description"></p>
             </div>
           </div>
           <!--//tab_one-->

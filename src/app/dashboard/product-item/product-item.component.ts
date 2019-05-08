@@ -19,6 +19,8 @@ export class ProductItemComponent implements OnInit {
   imageView = null;
   file: File;
   isLoading = false;
+  comments = []
+
   editorConfig: AngularEditorConfig = {
     editable: true,
     spellcheck: true,
@@ -66,7 +68,10 @@ export class ProductItemComponent implements OnInit {
     if (this.activeRoute.snapshot.params.id != 'create') {
       this.productService.onGetProduct(this.activeRoute.snapshot.params.id).then(res => {
         if (res.data && res.data.Item) {
+
           let item = res.data.Item;
+          console.log(item);
+
           this.productForm.setValue({
             id: item.id,
             name: item.name,
@@ -78,6 +83,7 @@ export class ProductItemComponent implements OnInit {
           })
           this.imageView = `${environment.s3}${item.image}`
           this.prices = item.prices
+          this.comments = item.comments
         }
 
       }).catch(err => {
@@ -104,9 +110,10 @@ export class ProductItemComponent implements OnInit {
     if (this.file) {
       url = await this.productService.uploadFile(this.file)
     }
-    this.productForm.value.image = url ? url.key : this.imageView;
+    this.productForm.value.image = url ? url.key : this.imageView.replace(environment.s3, '');
+    console.log({ ...this.productForm.value, comments: this.comments, prices: this.prices });
 
-    let result = await this.productService.onPostProduct({ ...this.productForm.value, prices: this.prices })
+    let result = await this.productService.onPostProduct({ ...this.productForm.value, comments: this.comments, prices: this.prices })
     this.isLoading = false;
     if (result) {
       swal("Save success!")

@@ -5,6 +5,8 @@ import axios from 'axios';
 import { ProductService } from 'app/services/product.service';
 import swal from 'sweetalert';
 import { Router } from '@angular/router';
+import { environment } from 'environments/environment';
+import * as uuid from 'device-uuid';
 
 @Component({
   selector: 'app-checkout',
@@ -38,10 +40,18 @@ export class CheckoutComponent implements OnInit {
       phoneNumber: ['', [Validators.required]],
       address: ['', [Validators.required]],
     })
-    this.checkoutForm.setValue({
-      fullname: '',
-      phoneNumber: '',
-      address: ''
+
+
+    this.productService.onGetUser(new uuid.DeviceUUID().get()).then(res => {
+      if (res && res.data && Object.keys(res.data).length) {
+        console.log(res.data);
+        let item = res.data.Item
+        this.checkoutForm.setValue({
+          fullname: item.fullname,
+          phoneNumber: item.phoneNumber,
+          address: item.address
+        });
+      }
     })
   }
 
@@ -61,7 +71,6 @@ export class CheckoutComponent implements OnInit {
 
   onSubmitOrder() {
     console.log({ ...this.checkoutForm.value, products: this.products, total: this.onGetTotal(), timestamp: Date.now() });
-
     this.productService.onOrder({ ...this.checkoutForm.value, products: this.products, total: this.onGetTotal(), timestamp: Date.now() }).then(res => {
       swal("Order success!")
       localStorage.removeItem('checkout')

@@ -45,63 +45,18 @@
           <table class="table">
             <thead class="text-primary">
               <tr>
+                <th>ID</th>
                 <th>Name</th>
-                <th>Price</th>
-                <th>Discount</th>
-                <th>Category</th>
-                <th></th>
+                <th>Email</th>
+                <th>Comment</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Dakota Rice</td>
-                <td class="text-primary">$36,738</td>
-                <td>30%</td>
-                <td>Oud-Turnhout</td>
-                <td>
-                  <button mat-raised-button color="primary">Edit</button>
-                  <button mat-raised-button color="accent">Delete</button>
-                </td>
-              </tr>
-              <tr>
-                <td>Dakota Rice</td>
-                <td class="text-primary">$36,738</td>
-                <td>30%</td>
-                <td>Oud-Turnhout</td>
-                <td>
-                  <button mat-raised-button color="primary">Edit</button>
-                  <button mat-raised-button color="accent">Delete</button>
-                </td>
-              </tr>
-              <tr>
-                <td>Dakota Rice</td>
-                <td class="text-primary">$36,738</td>
-                <td>30%</td>
-                <td>Oud-Turnhout</td>
-                <td>
-                  <button mat-raised-button color="primary">Edit</button>
-                  <button mat-raised-button color="accent">Delete</button>
-                </td>
-              </tr>
-              <tr>
-                <td>Dakota Rice</td>
-                <td class="text-primary">$36,738</td>
-                <td>30%</td>
-                <td>Oud-Turnhout</td>
-                <td>
-                  <button mat-raised-button color="primary">Edit</button>
-                  <button mat-raised-button color="accent">Delete</button>
-                </td>
-              </tr>
-              <tr>
-                <td>Dakota Rice</td>
-                <td class="text-primary">$36,738</td>
-                <td>30%</td>
-                <td>Oud-Turnhout</td>
-                <td>
-                  <button mat-raised-button color="primary">Edit</button>
-                  <button mat-raised-button color="accent">Delete</button>
-                </td>
+              <tr *ngFor="let comment of comments;let i=index">
+                <td>{{i+1}}</td>
+                <td>{{comment.fullname}}</td>
+                <td>{{comment.email}}</td>
+                <td>{{comment.content}}</td>
               </tr>
             </tbody>
           </table>

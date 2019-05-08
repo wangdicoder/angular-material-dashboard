@@ -1,7 +1,8 @@
 <app-header></app-header>
 <div class="ads-grid_shop">
   <div class="shop_inner_inf">
-    <app-sidebar></app-sidebar>
+    <app-sidebar (onselectCategory)="filterCategory($event)" (onSelectDiscount)="filterDiscount($event)"
+      (onSearch)="filterName($event)"></app-sidebar>
     <div class="left-ads-display col-md-9">
       <div class="wrapper_top_shop">
         <div class="clearfix"></div>
